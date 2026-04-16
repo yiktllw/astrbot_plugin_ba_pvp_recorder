@@ -33,14 +33,14 @@ def main() -> int:
             cn_file,
             1,
             5,
-            "下载 CN students.min.json",
+            "下载 ZH_CN students.min.json",
         )
         download_file(
             "https://schaledb.com/data/tw/students.min.json",
             tw_file,
             2,
             5,
-            "下载 TW students.min.json -> zh_tw_students.min.json",
+            "下载 ZH_TW students.min.json -> zh_tw_students.min.json",
         )
         download_file(
             "https://schaledb.com/data/en/students.min.json",
