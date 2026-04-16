@@ -1,0 +1,7 @@
+name: astrbot_plugin_ba_pvp_recorder
+display_name: 蔚蓝档案竞技场记录插件
+desc: 记录并查询蔚蓝档案竞技场对战信息的 AstrBot 插件。
+version: v0.2.3
+author: yiktllw
+repo: https://github.com/yiktllw/astrbot_plugin_ba_pvp_recorder
+astrbot_version: ">=4.16,<5"

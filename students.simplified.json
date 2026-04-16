@@ -1,1801 +1,1544 @@
 [
-    {
-        "name": "爱露",
-        "BulletType": "Explosion",
-        "id": "10000",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "艾米",
-        "BulletType": "Explosion",
-        "id": "10001",
-        "ArmorType": "LightArmor",
-        "position": "Front"
-    },
-    {
-        "name": "晴奈",
-        "BulletType": "Mystic",
-        "id": "10002",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "日富美",
-        "BulletType": "Pierce",
-        "id": "10003",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "日奈",
-        "BulletType": "Explosion",
-        "id": "10004",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "星野",
-        "BulletType": "Pierce",
-        "id": "10005",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "伊织",
-        "BulletType": "Pierce",
-        "id": "10006",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "真纪",
-        "BulletType": "Pierce",
-        "id": "10007",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "妮露",
-        "BulletType": "Pierce",
-        "id": "10008",
-        "ArmorType": "LightArmor",
-        "position": "Front"
-    },
-    {
-        "name": "泉",
-        "BulletType": "Explosion",
-        "id": "10009",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "白子",
-        "BulletType": "Explosion",
-        "id": "10010",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "瞬",
-        "BulletType": "Explosion",
-        "id": "10011",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "堇",
-        "BulletType": "Pierce",
-        "id": "10012",
-        "ArmorType": "Unarmed",
-        "position": "Front"
-    },
-    {
-        "name": "鹤城",
-        "BulletType": "Pierce",
-        "id": "10013",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "泉奈",
-        "BulletType": "Mystic",
-        "id": "10014",
-        "ArmorType": "LightArmor",
-        "position": "Front"
-    },
-    {
-        "name": "爱丽丝",
-        "BulletType": "Mystic",
-        "id": "10015",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "绿",
-        "BulletType": "Pierce",
-        "id": "10016",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "切里诺",
-        "BulletType": "Pierce",
-        "id": "10017",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "柚子",
-        "BulletType": "Pierce",
-        "id": "10018",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "梓",
-        "BulletType": "Explosion",
-        "id": "10019",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "小春",
-        "BulletType": "Explosion",
-        "id": "10020",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "梓（泳装）",
-        "BulletType": "Mystic",
-        "id": "10021",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "日奈（泳装）",
-        "BulletType": "Explosion",
-        "id": "10022",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "伊织（泳装）",
-        "BulletType": "Explosion",
-        "id": "10023",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "白子（骑行）",
-        "BulletType": "Mystic",
-        "id": "10024",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "瞬（小）",
-        "BulletType": "Explosion",
-        "id": "10025",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "妮露（邦妮）",
-        "BulletType": "Explosion",
-        "id": "10026",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "花凛（邦妮）",
-        "BulletType": "Mystic",
-        "id": "10027",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "明日奈（邦妮）",
-        "BulletType": "Mystic",
-        "id": "10028",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "夏",
-        "BulletType": "Mystic",
-        "id": "10029",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "千夏（温泉）",
-        "BulletType": "Mystic",
-        "id": "10030",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "爱露（新年）",
-        "BulletType": "Pierce",
-        "id": "10031",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "睦月（新年）",
-        "BulletType": "Mystic",
-        "id": "10032",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "若藻",
-        "BulletType": "Mystic",
-        "id": "10033",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "三森",
-        "BulletType": "Mystic",
-        "id": "10034",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "忧",
-        "BulletType": "Explosion",
-        "id": "10035",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "日向",
-        "BulletType": "Mystic",
-        "id": "10036",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "真里奈",
-        "BulletType": "Pierce",
-        "id": "10037",
-        "ArmorType": "LightArmor",
-        "position": "Front"
-    },
-    {
-        "name": "宫子",
-        "BulletType": "Pierce",
-        "id": "10038",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "美游",
-        "BulletType": "Pierce",
-        "id": "10039",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "月咏",
-        "BulletType": "Mystic",
-        "id": "10040",
-        "ArmorType": "LightArmor",
-        "position": "Front"
-    },
-    {
-        "name": "美咲",
-        "BulletType": "Explosion",
-        "id": "10041",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "亚津子",
-        "BulletType": "Explosion",
-        "id": "10042",
-        "ArmorType": "Unarmed",
-        "position": "Front"
-    },
-    {
-        "name": "若藻（泳装）",
-        "BulletType": "Pierce",
-        "id": "10043",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "野宫（泳装）",
-        "BulletType": "Explosion",
-        "id": "10044",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "星野（泳装）",
-        "BulletType": "Explosion",
-        "id": "10045",
-        "ArmorType": "Unarmed",
-        "position": "Front"
-    },
-    {
-        "name": "泉奈（泳装）",
-        "BulletType": "Mystic",
-        "id": "10046",
-        "ArmorType": "Unarmed",
-        "position": "Front"
-    },
-    {
-        "name": "千世（泳装）",
-        "BulletType": "Mystic",
-        "id": "10047",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "纱织",
-        "BulletType": "Explosion",
-        "id": "10048",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "和纱",
-        "BulletType": "Pierce",
-        "id": "10049",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "心奈",
-        "BulletType": "Pierce",
-        "id": "10050",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "歌原（应援团）",
-        "BulletType": "Mystic",
-        "id": "10051",
-        "ArmorType": "Unarmed",
-        "position": "Front"
-    },
-    {
-        "name": "诺亚",
-        "BulletType": "Mystic",
-        "id": "10052",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "优香（体操服）",
-        "BulletType": "Mystic",
-        "id": "10053",
-        "ArmorType": "Unarmed",
-        "position": "Front"
-    },
-    {
-        "name": "玛丽（体操服）",
-        "BulletType": "Mystic",
-        "id": "10054",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "时雨",
-        "BulletType": "Explosion",
-        "id": "10055",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "芹娜（圣诞）",
-        "BulletType": "Pierce",
-        "id": "10056",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "晴奈（新年）",
-        "BulletType": "Explosion",
-        "id": "10057",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "美祢",
-        "BulletType": "Explosion",
-        "id": "10058",
-        "ArmorType": "LightArmor",
-        "position": "Front"
-    },
-    {
-        "name": "未花",
-        "BulletType": "Pierce",
-        "id": "10059",
-        "ArmorType": "LightArmor",
-        "position": "Front"
-    },
-    {
-        "name": "惠",
-        "BulletType": "Explosion",
-        "id": "10060",
-        "ArmorType": "Unarmed",
-        "position": "Front"
-    },
-    {
-        "name": "樱子",
-        "BulletType": "Mystic",
-        "id": "10061",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "时",
-        "BulletType": "Explosion",
-        "id": "10062",
-        "ArmorType": "ElasticArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "小雪",
-        "BulletType": "Mystic",
-        "id": "10063",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "佳代子（新年）",
-        "BulletType": "Mystic",
-        "id": "10064",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "果穗",
-        "BulletType": "Mystic",
-        "id": "10065",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "爱丽丝（女仆）",
-        "BulletType": "Mystic",
-        "id": "10066",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "时（邦妮）",
-        "BulletType": "Explosion",
-        "id": "10067",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "玲纱",
-        "BulletType": "Pierce",
-        "id": "10068",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "瑠海",
-        "BulletType": "Explosion",
-        "id": "10069",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "南",
-        "BulletType": "Explosion",
-        "id": "10070",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "宫子（泳装）",
-        "BulletType": "Explosion",
-        "id": "10071",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "咲（泳装）",
-        "BulletType": "Explosion",
-        "id": "10072",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "忧（泳装）",
-        "BulletType": "Pierce",
-        "id": "10073",
-        "ArmorType": "ElasticArmor",
-        "position": "Back"
-    },
-    {
-        "name": "花子（泳装）",
-        "BulletType": "Sonic",
-        "id": "10074",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "芽瑠",
-        "BulletType": "Pierce",
-        "id": "10075",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "琴里（应援团）",
-        "BulletType": "Explosion",
-        "id": "10076",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "一花",
-        "BulletType": "Sonic",
-        "id": "10077",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "霞",
-        "BulletType": "Sonic",
-        "id": "10078",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "御坂美琴",
-        "BulletType": "Pierce",
-        "id": "10079",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "食蜂操祈",
-        "BulletType": "Explosion",
-        "id": "10080",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "紫",
-        "BulletType": "Sonic",
-        "id": "10081",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "莲华",
-        "BulletType": "Sonic",
-        "id": "10082",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "桔梗",
-        "BulletType": "Sonic",
-        "id": "10083",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "小玉（露营）",
-        "BulletType": "Pierce",
-        "id": "10084",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "晴（露营）",
-        "BulletType": "Explosion",
-        "id": "10085",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "日奈（礼服）",
-        "BulletType": "Explosion",
-        "id": "10086",
-        "ArmorType": "ElasticArmor",
-        "position": "Back"
-    },
-    {
-        "name": "亚子（礼服）",
-        "BulletType": "Explosion",
-        "id": "10087",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "佳代子（礼服）",
-        "BulletType": "Pierce",
-        "id": "10088",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "爱露（礼服）",
-        "BulletType": "Pierce",
-        "id": "10089",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "海香",
-        "BulletType": "Mystic",
-        "id": "10090",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "和纱（乐队）",
-        "BulletType": "Explosion",
-        "id": "10091",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "好美（乐队）",
-        "BulletType": "Explosion",
-        "id": "10092",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "绮罗罗",
-        "BulletType": "Sonic",
-        "id": "10093",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "桃（女仆）",
-        "BulletType": "Sonic",
-        "id": "10094",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "绿（女仆）",
-        "BulletType": "Sonic",
-        "id": "10095",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "康娜（泳装）",
-        "BulletType": "Explosion",
-        "id": "10096",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "萌绘（泳装）",
-        "BulletType": "Sonic",
-        "id": "10097",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "星野（武装）",
-        "BulletType": "Mystic",
-        "id": "10098",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "星野（武装）",
-        "BulletType": "Mystic",
-        "id": "10099",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "白子＊恐怖",
-        "BulletType": "Mystic",
-        "id": "10100",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "纱织（泳装）",
-        "BulletType": "Mystic",
-        "id": "10101",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "日和（泳装）",
-        "BulletType": "Pierce",
-        "id": "10102",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "真里奈（旗袍）",
-        "BulletType": "Pierce",
-        "id": "10103",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "丽情",
-        "BulletType": "Mystic",
-        "id": "10104",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "玛丽（偶像）",
-        "BulletType": "Explosion",
-        "id": "10105",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "樱子（偶像）",
-        "BulletType": "Explosion",
-        "id": "10106",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "千秋",
-        "BulletType": "Sonic",
-        "id": "10107",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "优香（睡衣）",
-        "BulletType": "Explosion",
-        "id": "10108",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "诺亚（睡衣）",
-        "BulletType": "Pierce",
-        "id": "10109",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "圣娅",
-        "BulletType": "Pierce",
-        "id": "10110",
-        "ArmorType": "ElasticArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "妮露（制服）",
-        "BulletType": "Pierce",
-        "id": "10111",
-        "ArmorType": "ElasticArmor",
-        "position": "Front"
-    },
-    {
-        "name": "明日奈（制服）",
-        "BulletType": "Explosion",
-        "id": "10112",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "濑名（便服）",
-        "BulletType": "Sonic",
-        "id": "10113",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "朱莉（打工）",
-        "BulletType": "Mystic",
-        "id": "10114",
-        "ArmorType": "LightArmor",
-        "position": "Front"
-    },
-    {
-        "name": "丽",
-        "BulletType": "Sonic",
-        "id": "10115",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "纱织（礼服）",
-        "BulletType": "Sonic",
-        "id": "10116",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "光",
-        "BulletType": "Sonic",
-        "id": "10117",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "望",
-        "BulletType": "Sonic",
-        "id": "10118",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "名草",
-        "BulletType": "Sonic",
-        "id": "10119",
-        "ArmorType": "ElasticArmor",
-        "position": "Back"
-    },
-    {
-        "name": "夏（乐队）",
-        "BulletType": "Explosion",
-        "id": "10120",
-        "ArmorType": "Unarmed",
-        "position": "Front"
-    },
-    {
-        "name": "紫（泳装）",
-        "BulletType": "Pierce",
-        "id": "10121",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "未花（泳装）",
-        "BulletType": "Sonic",
-        "id": "10122",
-        "ArmorType": "Unarmed",
-        "position": "Front"
-    },
-    {
-        "name": "圣娅（泳装）",
-        "BulletType": "Pierce",
-        "id": "10123",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "莲见（泳装）",
-        "BulletType": "Pierce",
-        "id": "10124",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "绘里",
-        "BulletType": "Sonic",
-        "id": "10125",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "庚",
-        "BulletType": "Mystic",
-        "id": "10126",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "美代",
-        "BulletType": "Sonic",
-        "id": "10127",
-        "ArmorType": "ElasticArmor",
-        "position": "Back"
-    },
-    {
-        "name": "冬",
-        "BulletType": "Sonic",
-        "id": "10128",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "铃美（魔法）",
-        "BulletType": "Sonic",
-        "id": "10129",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "昴",
-        "BulletType": "Mystic",
-        "id": "10130",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "贵音",
-        "BulletType": "Mystic",
-        "id": "10131",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "月咏（礼服）",
-        "BulletType": "Pierce",
-        "id": "10132",
-        "ArmorType": "LightArmor",
-        "position": "Front"
-    },
-    {
-        "name": "莉音（武装）",
-        "BulletType": "Explosion",
-        "id": "10133",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "爱丽丝（武装）",
-        "BulletType": "Mystic",
-        "id": "10134",
-        "ArmorType": "CompositeArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "柯伊",
-        "BulletType": "Mystic",
-        "id": "10135",
-        "ArmorType": "CompositeArmor",
-        "position": "Back"
-    },
-    {
-        "name": "艾米（武装）",
-        "BulletType": "Explosion",
-        "id": "10136",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "木乃香",
-        "BulletType": "Mystic",
-        "id": "10137",
-        "ArmorType": "LightArmor",
-        "position": "Front"
-    },
-    {
-        "name": "丽奈",
-        "BulletType": "Explosion",
-        "id": "10138",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "茜",
-        "BulletType": "Pierce",
-        "id": "13000",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "千世",
-        "BulletType": "Mystic",
-        "id": "13001",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "明里",
-        "BulletType": "Explosion",
-        "id": "13002",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "莲见",
-        "BulletType": "Pierce",
-        "id": "13003",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "野宫",
-        "BulletType": "Pierce",
-        "id": "13004",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "佳代子",
-        "BulletType": "Explosion",
-        "id": "13005",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "睦月",
-        "BulletType": "Explosion",
-        "id": "13006",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "纯子",
-        "BulletType": "Pierce",
-        "id": "13007",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "芹香",
-        "BulletType": "Explosion",
-        "id": "13008",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "椿",
-        "BulletType": "Pierce",
-        "id": "13009",
-        "ArmorType": "Unarmed",
-        "position": "Front"
-    },
-    {
-        "name": "优香",
-        "BulletType": "Explosion",
-        "id": "13010",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "桃",
-        "BulletType": "Pierce",
-        "id": "13011",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "桐乃",
-        "BulletType": "Explosion",
-        "id": "13012",
-        "ArmorType": "Unarmed",
-        "position": "Middle"
-    },
-    {
-        "name": "红叶",
-        "BulletType": "Sonic",
-        "id": "13013",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "莲华（泳装）",
-        "BulletType": "Sonic",
-        "id": "13014",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "春香",
-        "BulletType": "Explosion",
-        "id": "16000",
-        "ArmorType": "LightArmor",
-        "position": "Front"
-    },
-    {
-        "name": "明日奈",
-        "BulletType": "Mystic",
-        "id": "16001",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "琴里",
-        "BulletType": "Pierce",
-        "id": "16002",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "铃美",
-        "BulletType": "Explosion",
-        "id": "16003",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "菲娜",
-        "BulletType": "Pierce",
-        "id": "16004",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "鹤城（泳装）",
-        "BulletType": "Mystic",
-        "id": "16005",
-        "ArmorType": "Unarmed",
-        "position": "Front"
-    },
-    {
-        "name": "泉（泳装）",
-        "BulletType": "Explosion",
-        "id": "16006",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "巴",
-        "BulletType": "Pierce",
-        "id": "16007",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "吹雪",
-        "BulletType": "Pierce",
-        "id": "16008",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "满",
-        "BulletType": "Mystic",
-        "id": "16009",
-        "ArmorType": "LightArmor",
-        "position": "Front"
-    },
-    {
-        "name": "响（应援团）",
-        "BulletType": "Explosion",
-        "id": "16010",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "莲见（体操服）",
-        "BulletType": "Mystic",
-        "id": "16011",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "纯子（新年）",
-        "BulletType": "Mystic",
-        "id": "16012",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "小春（泳装）",
-        "BulletType": "Mystic",
-        "id": "16013",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "伊吹",
-        "BulletType": "Mystic",
-        "id": "16014",
-        "ArmorType": "HeavyArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "爱理（乐队）",
-        "BulletType": "Explosion",
-        "id": "16015",
-        "ArmorType": "Unarmed",
-        "position": "Front"
-    },
-    {
-        "name": "美祢（偶像）",
-        "BulletType": "Explosion",
-        "id": "16016",
-        "ArmorType": "HeavyArmor",
-        "position": "Front"
-    },
-    {
-        "name": "青叶",
-        "BulletType": "Sonic",
-        "id": "16017",
-        "ArmorType": "LightArmor",
-        "position": "Front"
-    },
-    {
-        "name": "兰舞",
-        "BulletType": "Sonic",
-        "id": "16018",
-        "ArmorType": "Unarmed",
-        "position": "Front"
-    },
-    {
-        "name": "时（武装）",
-        "BulletType": "Pierce",
-        "id": "16019",
-        "ArmorType": "LightArmor",
-        "position": "Middle"
-    },
-    {
-        "name": "响",
-        "BulletType": "Explosion",
-        "id": "20000",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "花凛",
-        "BulletType": "Pierce",
-        "id": "20001",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "纱绫",
-        "BulletType": "Explosion",
-        "id": "20002",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "真白",
-        "BulletType": "Explosion",
-        "id": "20003",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "真白（泳装）",
-        "BulletType": "Mystic",
-        "id": "20004",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "日富美（泳装）",
-        "BulletType": "Pierce",
-        "id": "20005",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "纱绫（便服）",
-        "BulletType": "Pierce",
-        "id": "20006",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "初音未来",
-        "BulletType": "Explosion",
-        "id": "20007",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "亚子",
-        "BulletType": "Mystic",
-        "id": "20008",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "切里诺（温泉）",
-        "BulletType": "Explosion",
-        "id": "20009",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "和香（温泉）",
-        "BulletType": "Explosion",
-        "id": "20010",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "芹香（新年）",
-        "BulletType": "Pierce",
-        "id": "20011",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "濑名",
-        "BulletType": "Mystic",
-        "id": "20012",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "千寻",
-        "BulletType": "Pierce",
-        "id": "20013",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "咲",
-        "BulletType": "Pierce",
-        "id": "20014",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "枫",
-        "BulletType": "Explosion",
-        "id": "20015",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "伊吕波",
-        "BulletType": "Mystic",
-        "id": "20016",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "日和",
-        "BulletType": "Explosion",
-        "id": "20017",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "萌绘",
-        "BulletType": "Pierce",
-        "id": "20018",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "茜（邦妮）",
-        "BulletType": "Mystic",
-        "id": "20019",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "日鞠",
-        "BulletType": "Pierce",
-        "id": "20020",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "花江（圣诞）",
-        "BulletType": "Mystic",
-        "id": "20021",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "风香（新年）",
-        "BulletType": "Pierce",
-        "id": "20022",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "康娜",
-        "BulletType": "Pierce",
-        "id": "20023",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "渚",
-        "BulletType": "Explosion",
-        "id": "20024",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "春香（新年）",
-        "BulletType": "Explosion",
-        "id": "20025",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "实梨",
-        "BulletType": "Explosion",
-        "id": "20026",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "白子（泳装）",
-        "BulletType": "Mystic",
-        "id": "20027",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "日向（泳装）",
-        "BulletType": "Explosion",
-        "id": "20028",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "三森（泳装）",
-        "BulletType": "Mystic",
-        "id": "20029",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "晴奈（体操服）",
-        "BulletType": "Sonic",
-        "id": "20030",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "时雨（温泉）",
-        "BulletType": "Pierce",
-        "id": "20031",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "艾米（泳装）",
-        "BulletType": "Mystic",
-        "id": "20032",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "真琴",
-        "BulletType": "Pierce",
-        "id": "20033",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "明里（新年）",
-        "BulletType": "Mystic",
-        "id": "20034",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "椿（导游）",
-        "BulletType": "Pierce",
-        "id": "20035",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "芹香（泳装）",
-        "BulletType": "Mystic",
-        "id": "20036",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "吹雪（泳装）",
-        "BulletType": "Explosion",
-        "id": "20037",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "巴（旗袍）",
-        "BulletType": "Mystic",
-        "id": "20038",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "妃咲",
-        "BulletType": "Sonic",
-        "id": "20039",
-        "ArmorType": "ElasticArmor",
-        "position": "Back"
-    },
-    {
-        "name": "皋月",
-        "BulletType": "Explosion",
-        "id": "20040",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "莉音",
-        "BulletType": "Mystic",
-        "id": "20041",
-        "ArmorType": "ElasticArmor",
-        "position": "Back"
-    },
-    {
-        "name": "真纪（露营）",
-        "BulletType": "Explosion",
-        "id": "20042",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "泉（正月）",
-        "BulletType": "Explosion",
-        "id": "20043",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "堇（打工）",
-        "BulletType": "Pierce",
-        "id": "20044",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "菲娜（导游）",
-        "BulletType": "Explosion",
-        "id": "20045",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "尼娅",
-        "BulletType": "Sonic",
-        "id": "20046",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "桔梗（泳装）",
-        "BulletType": "Sonic",
-        "id": "20047",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "渚（泳装）",
-        "BulletType": "Sonic",
-        "id": "20048",
-        "ArmorType": "ElasticArmor",
-        "position": "Back"
-    },
-    {
-        "name": "美咲（泳装）",
-        "BulletType": "Explosion",
-        "id": "20049",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "律",
-        "BulletType": "Mystic",
-        "id": "20050",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "玲纱（魔法）",
-        "BulletType": "Sonic",
-        "id": "20051",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "八云",
-        "BulletType": "Explosion",
-        "id": "20052",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "满（礼服）",
-        "BulletType": "Explosion",
-        "id": "20053",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "日鞠（武装）",
-        "BulletType": "Pierce",
-        "id": "20054",
-        "ArmorType": "ElasticArmor",
-        "position": "Back"
-    },
-    {
-        "name": "柚子（武装）",
-        "BulletType": "Mystic",
-        "id": "20055",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "小雪（睡衣）",
-        "BulletType": "Mystic",
-        "id": "20056",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "茜（制服）",
-        "BulletType": "Explosion",
-        "id": "20057",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "爱理",
-        "BulletType": "Explosion",
-        "id": "23000",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "风香",
-        "BulletType": "Explosion",
-        "id": "23001",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "花江",
-        "BulletType": "Explosion",
-        "id": "23002",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "晴",
-        "BulletType": "Explosion",
-        "id": "23003",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "歌原",
-        "BulletType": "Pierce",
-        "id": "23004",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "绫音",
-        "BulletType": "Pierce",
-        "id": "23005",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "静子",
-        "BulletType": "Mystic",
-        "id": "23006",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "花子",
-        "BulletType": "Pierce",
-        "id": "23007",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "玛丽",
-        "BulletType": "Mystic",
-        "id": "23008",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "千夏",
-        "BulletType": "Pierce",
-        "id": "26000",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "小玉",
-        "BulletType": "Explosion",
-        "id": "26001",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "朱莉",
-        "BulletType": "Explosion",
-        "id": "26002",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "芹娜",
-        "BulletType": "Mystic",
-        "id": "26003",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "志美子",
-        "BulletType": "Explosion",
-        "id": "26004",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "好美",
-        "BulletType": "Pierce",
-        "id": "26005",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "和香",
-        "BulletType": "Explosion",
-        "id": "26006",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "绫音（泳装）",
-        "BulletType": "Pierce",
-        "id": "26007",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "静子（泳装）",
-        "BulletType": "Mystic",
-        "id": "26008",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "柚子（女仆）",
-        "BulletType": "Explosion",
-        "id": "26009",
-        "ArmorType": "ElasticArmor",
-        "position": "Back"
-    },
-    {
-        "name": "美游（泳装）",
-        "BulletType": "Explosion",
-        "id": "26010",
-        "ArmorType": "LightArmor",
-        "position": "Back"
-    },
-    {
-        "name": "佐天泪子",
-        "BulletType": "Pierce",
-        "id": "26011",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "桐乃（泳装）",
-        "BulletType": "Mystic",
-        "id": "26012",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "亚津子（泳装）",
-        "BulletType": "Sonic",
-        "id": "26013",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    },
-    {
-        "name": "花凛（制服）",
-        "BulletType": "Explosion",
-        "id": "26014",
-        "ArmorType": "HeavyArmor",
-        "position": "Back"
-    },
-    {
-        "name": "一花（泳装）",
-        "BulletType": "Sonic",
-        "id": "26015",
-        "ArmorType": "Unarmed",
-        "position": "Back"
-    }
+  {
+    "id": 10000,
+    "name": "爱露",
+    "t_name": "亞瑠",
+    "en_name": "Aru"
+  },
+  {
+    "id": 10001,
+    "name": "艾米",
+    "t_name": "英美",
+    "en_name": "Eimi"
+  },
+  {
+    "id": 10002,
+    "name": "晴奈",
+    "t_name": "羽留奈",
+    "en_name": "Haruna"
+  },
+  {
+    "id": 10003,
+    "name": "日富美",
+    "t_name": "日步美",
+    "en_name": "Hifumi"
+  },
+  {
+    "id": 10004,
+    "name": "日奈",
+    "t_name": "陽奈",
+    "en_name": "Hina"
+  },
+  {
+    "id": 10005,
+    "name": "星野",
+    "t_name": "星野",
+    "en_name": "Hoshino"
+  },
+  {
+    "id": 10006,
+    "name": "伊织",
+    "t_name": "伊織",
+    "en_name": "Iori"
+  },
+  {
+    "id": 10007,
+    "name": "真纪",
+    "t_name": "真紀",
+    "en_name": "Maki"
+  },
+  {
+    "id": 10008,
+    "name": "妮露",
+    "t_name": "寧瑠",
+    "en_name": "Neru"
+  },
+  {
+    "id": 10009,
+    "name": "泉",
+    "t_name": "泉",
+    "en_name": "Izumi"
+  },
+  {
+    "id": 10010,
+    "name": "白子",
+    "t_name": "白子",
+    "en_name": "Shiroko"
+  },
+  {
+    "id": 10011,
+    "name": "瞬",
+    "t_name": "旬",
+    "en_name": "Shun"
+  },
+  {
+    "id": 10012,
+    "name": "堇",
+    "t_name": "堇",
+    "en_name": "Sumire"
+  },
+  {
+    "id": 10013,
+    "name": "鹤城",
+    "t_name": "弦生",
+    "en_name": "Tsurugi"
+  },
+  {
+    "id": 13000,
+    "name": "茜",
+    "t_name": "朱音",
+    "en_name": "Akane"
+  },
+  {
+    "id": 13001,
+    "name": "千世",
+    "t_name": "知世",
+    "en_name": "Chise"
+  },
+  {
+    "id": 13002,
+    "name": "明里",
+    "t_name": "亞伽里",
+    "en_name": "Akari"
+  },
+  {
+    "id": 13003,
+    "name": "莲见",
+    "t_name": "蓮實",
+    "en_name": "Hasumi"
+  },
+  {
+    "id": 13004,
+    "name": "野宫",
+    "t_name": "野乃美",
+    "en_name": "Nonomi"
+  },
+  {
+    "id": 13005,
+    "name": "佳代子",
+    "t_name": "佳世子",
+    "en_name": "Kayoko"
+  },
+  {
+    "id": 13006,
+    "name": "睦月",
+    "t_name": "無月",
+    "en_name": "Mutsuki"
+  },
+  {
+    "id": 13007,
+    "name": "纯子",
+    "t_name": "淳子",
+    "en_name": "Junko"
+  },
+  {
+    "id": 13008,
+    "name": "芹香",
+    "t_name": "茜香",
+    "en_name": "Serika"
+  },
+  {
+    "id": 13009,
+    "name": "椿",
+    "t_name": "椿",
+    "en_name": "Tsubaki"
+  },
+  {
+    "id": 13010,
+    "name": "优香",
+    "t_name": "優香",
+    "en_name": "Yuuka"
+  },
+  {
+    "id": 16000,
+    "name": "春香",
+    "t_name": "遙香",
+    "en_name": "Haruka"
+  },
+  {
+    "id": 16001,
+    "name": "明日奈",
+    "t_name": "明日奈",
+    "en_name": "Asuna"
+  },
+  {
+    "id": 16002,
+    "name": "琴里",
+    "t_name": "亞都梨",
+    "en_name": "Kotori"
+  },
+  {
+    "id": 16003,
+    "name": "铃美",
+    "t_name": "鈴美",
+    "en_name": "Suzumi"
+  },
+  {
+    "id": 16004,
+    "name": "菲娜",
+    "t_name": "菲娜",
+    "en_name": "Pina"
+  },
+  {
+    "id": 20000,
+    "name": "响",
+    "t_name": "響",
+    "en_name": "Hibiki"
+  },
+  {
+    "id": 20001,
+    "name": "花凛",
+    "t_name": "花凛",
+    "en_name": "Karin"
+  },
+  {
+    "id": 20002,
+    "name": "纱绫",
+    "t_name": "沙耶",
+    "en_name": "Saya"
+  },
+  {
+    "id": 23000,
+    "name": "爱理",
+    "t_name": "愛莉",
+    "en_name": "Airi"
+  },
+  {
+    "id": 23001,
+    "name": "风香",
+    "t_name": "風華",
+    "en_name": "Fuuka"
+  },
+  {
+    "id": 23002,
+    "name": "花江",
+    "t_name": "花繪",
+    "en_name": "Hanae"
+  },
+  {
+    "id": 23003,
+    "name": "晴",
+    "t_name": "晴",
+    "en_name": "Hare"
+  },
+  {
+    "id": 23004,
+    "name": "歌原",
+    "t_name": "詠葉",
+    "en_name": "Utaha"
+  },
+  {
+    "id": 23005,
+    "name": "绫音",
+    "t_name": "綾音",
+    "en_name": "Ayane"
+  },
+  {
+    "id": 26000,
+    "name": "千夏",
+    "t_name": "千夏",
+    "en_name": "Chinatsu"
+  },
+  {
+    "id": 26001,
+    "name": "小玉",
+    "t_name": "小玉",
+    "en_name": "Kotama"
+  },
+  {
+    "id": 26002,
+    "name": "朱莉",
+    "t_name": "茱莉",
+    "en_name": "Juri"
+  },
+  {
+    "id": 26003,
+    "name": "芹娜",
+    "t_name": "芹奈",
+    "en_name": "Serina"
+  },
+  {
+    "id": 26004,
+    "name": "志美子",
+    "t_name": "志美子",
+    "en_name": "Shimiko"
+  },
+  {
+    "id": 26005,
+    "name": "好美",
+    "t_name": "喜美",
+    "en_name": "Yoshimi"
+  },
+  {
+    "id": 20003,
+    "name": "真白",
+    "t_name": "麻白",
+    "en_name": "Mashiro"
+  },
+  {
+    "id": 10014,
+    "name": "泉奈",
+    "t_name": "伊樹菜",
+    "en_name": "Izuna"
+  },
+  {
+    "id": 23006,
+    "name": "静子",
+    "t_name": "靜子",
+    "en_name": "Shizuko"
+  },
+  {
+    "id": 10015,
+    "name": "爱丽丝",
+    "t_name": "愛麗絲",
+    "en_name": "Aris"
+  },
+  {
+    "id": 10016,
+    "name": "绿",
+    "t_name": "綠",
+    "en_name": "Midori"
+  },
+  {
+    "id": 13011,
+    "name": "桃",
+    "t_name": "桃井",
+    "en_name": "Momoi"
+  },
+  {
+    "id": 10017,
+    "name": "切里诺",
+    "t_name": "潔莉諾",
+    "en_name": "Cherino"
+  },
+  {
+    "id": 26006,
+    "name": "和香",
+    "t_name": "和香",
+    "en_name": "Nodoka"
+  },
+  {
+    "id": 10018,
+    "name": "柚子",
+    "t_name": "柚子",
+    "en_name": "Yuzu"
+  },
+  {
+    "id": 10019,
+    "name": "梓",
+    "t_name": "梓",
+    "en_name": "Azusa"
+  },
+  {
+    "id": 23007,
+    "name": "花子",
+    "t_name": "花子",
+    "en_name": "Hanako"
+  },
+  {
+    "id": 10020,
+    "name": "小春",
+    "t_name": "小春",
+    "en_name": "Koharu"
+  },
+  {
+    "id": 10021,
+    "name": "梓（泳装）",
+    "t_name": "梓(泳裝)",
+    "en_name": "Azusa (Swimsuit)"
+  },
+  {
+    "id": 20004,
+    "name": "真白（泳装）",
+    "t_name": "麻白(泳裝)",
+    "en_name": "Mashiro (Swimsuit)"
+  },
+  {
+    "id": 16005,
+    "name": "鹤城（泳装）",
+    "t_name": "弦生(泳裝)",
+    "en_name": "Tsurugi (Swimsuit)"
+  },
+  {
+    "id": 20005,
+    "name": "日富美（泳装）",
+    "t_name": "日步美(泳裝)",
+    "en_name": "Hifumi (Swimsuit)"
+  },
+  {
+    "id": 10022,
+    "name": "日奈（泳装）",
+    "t_name": "陽奈(泳裝)",
+    "en_name": "Hina (Swimsuit)"
+  },
+  {
+    "id": 10023,
+    "name": "伊织（泳装）",
+    "t_name": "伊織(泳裝)",
+    "en_name": "Iori (Swimsuit)"
+  },
+  {
+    "id": 16006,
+    "name": "泉（泳装）",
+    "t_name": "泉(泳裝)",
+    "en_name": "Izumi (Swimsuit)"
+  },
+  {
+    "id": 10024,
+    "name": "白子（骑行）",
+    "t_name": "白子(單車)",
+    "en_name": "Shiroko (Cycling)"
+  },
+  {
+    "id": 10025,
+    "name": "瞬（小）",
+    "t_name": "旬(幼女)",
+    "en_name": "Shun (Small)"
+  },
+  {
+    "id": 13012,
+    "name": "桐乃",
+    "t_name": "桐乃",
+    "en_name": "Kirino"
+  },
+  {
+    "id": 20006,
+    "name": "纱绫（便服）",
+    "t_name": "沙耶(私服)",
+    "en_name": "Saya (Casual)"
+  },
+  {
+    "id": 10026,
+    "name": "妮露（邦妮）",
+    "t_name": "寧瑠(兔女郎)",
+    "en_name": "Neru (Bunny)"
+  },
+  {
+    "id": 10027,
+    "name": "花凛（邦妮）",
+    "t_name": "花凛(兔女郎)",
+    "en_name": "Karin (Bunny)"
+  },
+  {
+    "id": 10028,
+    "name": "明日奈（邦妮）",
+    "t_name": "明日奈(兔女郎)",
+    "en_name": "Asuna (Bunny)"
+  },
+  {
+    "id": 10029,
+    "name": "夏",
+    "t_name": "夏",
+    "en_name": "Natsu"
+  },
+  {
+    "id": 23008,
+    "name": "玛丽",
+    "t_name": "瑪麗",
+    "en_name": "Mari"
+  },
+  {
+    "id": 20007,
+    "name": "初音未来",
+    "t_name": "初音未來",
+    "en_name": "Hatsune Miku"
+  },
+  {
+    "id": 20008,
+    "name": "亚子",
+    "t_name": "亞子",
+    "en_name": "Ako"
+  },
+  {
+    "id": 20009,
+    "name": "切里诺（温泉）",
+    "t_name": "潔莉諾(溫泉)",
+    "en_name": "Cherino (Hot Spring)"
+  },
+  {
+    "id": 10030,
+    "name": "千夏（温泉）",
+    "t_name": "千夏(溫泉)",
+    "en_name": "Chinatsu (Hot Spring)"
+  },
+  {
+    "id": 16007,
+    "name": "巴",
+    "t_name": "智惠",
+    "en_name": "Tomoe"
+  },
+  {
+    "id": 20010,
+    "name": "和香（温泉）",
+    "t_name": "和香(溫泉)",
+    "en_name": "Nodoka (Hot Spring)"
+  },
+  {
+    "id": 10031,
+    "name": "爱露（新年）",
+    "t_name": "亞瑠(正月)",
+    "en_name": "Aru (New Year)"
+  },
+  {
+    "id": 10032,
+    "name": "睦月（新年）",
+    "t_name": "無月(正月)",
+    "en_name": "Mutsuki (New Year)"
+  },
+  {
+    "id": 20011,
+    "name": "芹香（新年）",
+    "t_name": "茜香(正月)",
+    "en_name": "Serika (New Year)"
+  },
+  {
+    "id": 10033,
+    "name": "若藻",
+    "t_name": "若藻",
+    "en_name": "Wakamo"
+  },
+  {
+    "id": 16008,
+    "name": "吹雪",
+    "t_name": "吹雪",
+    "en_name": "Fubuki"
+  },
+  {
+    "id": 20012,
+    "name": "濑名",
+    "t_name": "瀬奈",
+    "en_name": "Sena"
+  },
+  {
+    "id": 20013,
+    "name": "千寻",
+    "t_name": "千尋",
+    "en_name": "Chihiro"
+  },
+  {
+    "id": 10034,
+    "name": "三森",
+    "t_name": "三森",
+    "en_name": "Mimori"
+  },
+  {
+    "id": 10035,
+    "name": "忧",
+    "t_name": "憂",
+    "en_name": "Ui"
+  },
+  {
+    "id": 10036,
+    "name": "日向",
+    "t_name": "日向",
+    "en_name": "Hinata"
+  },
+  {
+    "id": 10037,
+    "name": "真里奈",
+    "t_name": "瑪麗娜",
+    "en_name": "Marina"
+  },
+  {
+    "id": 10038,
+    "name": "宫子",
+    "t_name": "都子",
+    "en_name": "Miyako"
+  },
+  {
+    "id": 20014,
+    "name": "咲",
+    "t_name": "咲希",
+    "en_name": "Saki"
+  },
+  {
+    "id": 10039,
+    "name": "美游",
+    "t_name": "美優",
+    "en_name": "Miyu"
+  },
+  {
+    "id": 20015,
+    "name": "枫",
+    "t_name": "楓",
+    "en_name": "Kaede"
+  },
+  {
+    "id": 20016,
+    "name": "伊吕波",
+    "t_name": "伊呂波",
+    "en_name": "Iroha"
+  },
+  {
+    "id": 16009,
+    "name": "满",
+    "t_name": "三千留",
+    "en_name": "Michiru"
+  },
+  {
+    "id": 10040,
+    "name": "月咏",
+    "t_name": "月夜",
+    "en_name": "Tsukuyo"
+  },
+  {
+    "id": 10041,
+    "name": "美咲",
+    "t_name": "美咲",
+    "en_name": "Misaki"
+  },
+  {
+    "id": 20017,
+    "name": "日和",
+    "t_name": "日和",
+    "en_name": "Hiyori"
+  },
+  {
+    "id": 10042,
+    "name": "亚津子",
+    "t_name": "敦子",
+    "en_name": "Atsuko"
+  },
+  {
+    "id": 10043,
+    "name": "若藻（泳装）",
+    "t_name": "若藻(泳裝)",
+    "en_name": "Wakamo (Swimsuit)"
+  },
+  {
+    "id": 10044,
+    "name": "野宫（泳装）",
+    "t_name": "野乃美(泳裝)",
+    "en_name": "Nonomi (Swimsuit)"
+  },
+  {
+    "id": 26007,
+    "name": "绫音（泳装）",
+    "t_name": "綾音(泳裝)",
+    "en_name": "Ayane (Swimsuit)"
+  },
+  {
+    "id": 10045,
+    "name": "星野（泳装）",
+    "t_name": "星野(泳裝)",
+    "en_name": "Hoshino (Swimsuit)"
+  },
+  {
+    "id": 26008,
+    "name": "静子（泳装）",
+    "t_name": "靜子(泳裝)",
+    "en_name": "Shizuko (Swimsuit)"
+  },
+  {
+    "id": 10046,
+    "name": "泉奈（泳装）",
+    "t_name": "伊樹菜(泳裝)",
+    "en_name": "Izuna (Swimsuit)"
+  },
+  {
+    "id": 10047,
+    "name": "千世（泳装）",
+    "t_name": "知世(泳裝)",
+    "en_name": "Chise (Swimsuit)"
+  },
+  {
+    "id": 10048,
+    "name": "纱织",
+    "t_name": "沙織",
+    "en_name": "Saori"
+  },
+  {
+    "id": 20018,
+    "name": "萌绘",
+    "t_name": "萌",
+    "en_name": "Moe"
+  },
+  {
+    "id": 10049,
+    "name": "和纱",
+    "t_name": "千紗",
+    "en_name": "Kazusa"
+  },
+  {
+    "id": 10050,
+    "name": "心奈",
+    "t_name": "心菜",
+    "en_name": "Kokona"
+  },
+  {
+    "id": 10051,
+    "name": "歌原（应援团）",
+    "t_name": "詠葉(應援團)",
+    "en_name": "Utaha (Cheer Squad)"
+  },
+  {
+    "id": 10052,
+    "name": "诺亚",
+    "t_name": "乃愛",
+    "en_name": "Noa"
+  },
+  {
+    "id": 16010,
+    "name": "响（应援团）",
+    "t_name": "響(應援團)",
+    "en_name": "Hibiki (Cheer Squad)"
+  },
+  {
+    "id": 20019,
+    "name": "茜（邦妮）",
+    "t_name": "朱音(兔女郎)",
+    "en_name": "Akane (Bunny)"
+  },
+  {
+    "id": 10053,
+    "name": "优香（体操服）",
+    "t_name": "優香(體育服)",
+    "en_name": "Yuuka (Track)"
+  },
+  {
+    "id": 10054,
+    "name": "玛丽（体操服）",
+    "t_name": "瑪麗(體育服)",
+    "en_name": "Mari (Track)"
+  },
+  {
+    "id": 16011,
+    "name": "莲见（体操服）",
+    "t_name": "蓮實(體育服)",
+    "en_name": "Hasumi (Track)"
+  },
+  {
+    "id": 20020,
+    "name": "日鞠",
+    "t_name": "陽葵",
+    "en_name": "Himari"
+  },
+  {
+    "id": 10055,
+    "name": "时雨",
+    "t_name": "時雨",
+    "en_name": "Shigure"
+  },
+  {
+    "id": 10056,
+    "name": "芹娜（圣诞）",
+    "t_name": "芹奈(聖誕節)",
+    "en_name": "Serina (Christmas)"
+  },
+  {
+    "id": 20021,
+    "name": "花江（圣诞）",
+    "t_name": "花繪(聖誕節)",
+    "en_name": "Hanae (Christmas)"
+  },
+  {
+    "id": 10057,
+    "name": "晴奈（新年）",
+    "t_name": "羽留奈(正月)",
+    "en_name": "Haruna (New Year)"
+  },
+  {
+    "id": 20022,
+    "name": "风香（新年）",
+    "t_name": "風華(正月)",
+    "en_name": "Fuuka (New Year)"
+  },
+  {
+    "id": 16012,
+    "name": "纯子（新年）",
+    "t_name": "淳子(正月)",
+    "en_name": "Junko (New Year)"
+  },
+  {
+    "id": 10058,
+    "name": "美祢",
+    "t_name": "美禰",
+    "en_name": "Mine"
+  },
+  {
+    "id": 10059,
+    "name": "未花",
+    "t_name": "彌香",
+    "en_name": "Mika"
+  },
+  {
+    "id": 10060,
+    "name": "惠",
+    "t_name": "惠",
+    "en_name": "Megu"
+  },
+  {
+    "id": 20023,
+    "name": "康娜",
+    "t_name": "環奈",
+    "en_name": "Kanna"
+  },
+  {
+    "id": 10061,
+    "name": "樱子",
+    "t_name": "櫻子",
+    "en_name": "Sakurako"
+  },
+  {
+    "id": 10062,
+    "name": "时",
+    "t_name": "季",
+    "en_name": "Toki"
+  },
+  {
+    "id": 20024,
+    "name": "渚",
+    "t_name": "渚",
+    "en_name": "Nagisa"
+  },
+  {
+    "id": 10063,
+    "name": "小雪",
+    "t_name": "小雪",
+    "en_name": "Koyuki"
+  },
+  {
+    "id": 10064,
+    "name": "佳代子（新年）",
+    "t_name": "佳世子(正月)",
+    "en_name": "Kayoko (New Year)"
+  },
+  {
+    "id": 20025,
+    "name": "春香（新年）",
+    "t_name": "遙香(正月)",
+    "en_name": "Haruka (New Year)"
+  },
+  {
+    "id": 10065,
+    "name": "果穗",
+    "t_name": "佳穗",
+    "en_name": "Kaho"
+  },
+  {
+    "id": 10066,
+    "name": "爱丽丝（女仆）",
+    "t_name": "愛麗絲(女僕)",
+    "en_name": "Aris (Maid)"
+  },
+  {
+    "id": 10067,
+    "name": "时（邦妮）",
+    "t_name": "季(兔女郎)",
+    "en_name": "Toki (Bunny)"
+  },
+  {
+    "id": 26009,
+    "name": "柚子（女仆）",
+    "t_name": "柚子(女僕)",
+    "en_name": "Yuzu (Maid)"
+  },
+  {
+    "id": 10068,
+    "name": "玲纱",
+    "t_name": "澪紗",
+    "en_name": "Reisa"
+  },
+  {
+    "id": 10069,
+    "name": "瑠海",
+    "t_name": "瑠美",
+    "en_name": "Rumi"
+  },
+  {
+    "id": 10070,
+    "name": "南",
+    "t_name": "美奈",
+    "en_name": "Mina"
+  },
+  {
+    "id": 20026,
+    "name": "实梨",
+    "t_name": "實里",
+    "en_name": "Minori"
+  },
+  {
+    "id": 10071,
+    "name": "宫子（泳装）",
+    "t_name": "都子(泳裝)",
+    "en_name": "Miyako (Swimsuit)"
+  },
+  {
+    "id": 10072,
+    "name": "咲（泳装）",
+    "t_name": "咲希(泳裝)",
+    "en_name": "Saki (Swimsuit)"
+  },
+  {
+    "id": 26010,
+    "name": "美游（泳装）",
+    "t_name": "美優(泳裝)",
+    "en_name": "Miyu (Swimsuit)"
+  },
+  {
+    "id": 20027,
+    "name": "白子（泳装）",
+    "t_name": "白子(泳裝)",
+    "en_name": "Shiroko (Swimsuit)"
+  },
+  {
+    "id": 10073,
+    "name": "忧（泳装）",
+    "t_name": "憂(泳裝)",
+    "en_name": "Ui (Swimsuit)"
+  },
+  {
+    "id": 20028,
+    "name": "日向（泳装）",
+    "t_name": "日向(泳裝)",
+    "en_name": "Hinata (Swimsuit)"
+  },
+  {
+    "id": 16013,
+    "name": "小春（泳装）",
+    "t_name": "小春(泳裝)",
+    "en_name": "Koharu (Swimsuit)"
+  },
+  {
+    "id": 10074,
+    "name": "花子（泳装）",
+    "t_name": "花子(泳裝)",
+    "en_name": "Hanako (Swimsuit)"
+  },
+  {
+    "id": 20029,
+    "name": "三森（泳装）",
+    "t_name": "三森(泳裝)",
+    "en_name": "Mimori (Swimsuit)"
+  },
+  {
+    "id": 10075,
+    "name": "芽瑠",
+    "t_name": "愛瑠",
+    "en_name": "Meru"
+  },
+  {
+    "id": 13013,
+    "name": "红叶",
+    "t_name": "紅葉",
+    "en_name": "Momiji"
+  },
+  {
+    "id": 10076,
+    "name": "琴里（应援团）",
+    "t_name": "亞都梨(應援團)",
+    "en_name": "Kotori (Cheer Squad)"
+  },
+  {
+    "id": 20030,
+    "name": "晴奈（体操服）",
+    "t_name": "羽留奈(體育服)",
+    "en_name": "Haruna (Track)"
+  },
+  {
+    "id": 10077,
+    "name": "一花",
+    "t_name": "一花",
+    "en_name": "Ichika"
+  },
+  {
+    "id": 10078,
+    "name": "霞",
+    "t_name": "佳澄",
+    "en_name": "Kasumi"
+  },
+  {
+    "id": 20031,
+    "name": "时雨（温泉）",
+    "t_name": "時雨(溫泉)",
+    "en_name": "Shigure (Hot Spring)"
+  },
+  {
+    "id": 10079,
+    "name": "御坂美琴",
+    "t_name": "御坂美琴",
+    "en_name": "Misaka Mikoto"
+  },
+  {
+    "id": 10080,
+    "name": "食蜂操祈",
+    "t_name": "食蜂操祈",
+    "en_name": "Shokuhou Misaki"
+  },
+  {
+    "id": 26011,
+    "name": "佐天泪子",
+    "t_name": "佐天涙子",
+    "en_name": "Saten Ruiko"
+  },
+  {
+    "id": 10081,
+    "name": "紫",
+    "t_name": "紫",
+    "en_name": "Yukari"
+  },
+  {
+    "id": 10082,
+    "name": "莲华",
+    "t_name": "蓮華",
+    "en_name": "Renge"
+  },
+  {
+    "id": 10083,
+    "name": "桔梗",
+    "t_name": "桔梗",
+    "en_name": "Kikyou"
+  },
+  {
+    "id": 20032,
+    "name": "艾米（泳装）",
+    "t_name": "英美(泳裝)",
+    "en_name": "Eimi (Swimsuit)"
+  },
+  {
+    "id": 10084,
+    "name": "小玉（露营）",
+    "t_name": "小玉(露營)",
+    "en_name": "Kotama (Camp)"
+  },
+  {
+    "id": 10085,
+    "name": "晴（露营）",
+    "t_name": "晴(露營)",
+    "en_name": "Hare (Camp)"
+  },
+  {
+    "id": 10087,
+    "name": "亚子（礼服）",
+    "t_name": "亞子(禮服)",
+    "en_name": "Ako (Dress)"
+  },
+  {
+    "id": 16014,
+    "name": "伊吹",
+    "t_name": "伊吹",
+    "en_name": "Ibuki"
+  },
+  {
+    "id": 20033,
+    "name": "真琴",
+    "t_name": "真琴",
+    "en_name": "Makoto"
+  },
+  {
+    "id": 10086,
+    "name": "日奈（礼服）",
+    "t_name": "陽奈(禮服)",
+    "en_name": "Hina (Dress)"
+  },
+  {
+    "id": 10088,
+    "name": "佳代子（礼服）",
+    "t_name": "佳世子(禮服)",
+    "en_name": "Kayoko (Dress)"
+  },
+  {
+    "id": 10089,
+    "name": "爱露（礼服）",
+    "t_name": "亞瑠(禮服)",
+    "en_name": "Aru (Dress)"
+  },
+  {
+    "id": 20034,
+    "name": "明里（新年）",
+    "t_name": "亞伽里(正月)",
+    "en_name": "Akari (New Year)"
+  },
+  {
+    "id": 10090,
+    "name": "海香",
+    "t_name": "海花",
+    "en_name": "Umika"
+  },
+  {
+    "id": 20035,
+    "name": "椿（导游）",
+    "t_name": "椿(導覽員)",
+    "en_name": "Tsubaki (Guide)"
+  },
+  {
+    "id": 10091,
+    "name": "和纱（乐队）",
+    "t_name": "千紗(樂團)",
+    "en_name": "Kazusa (Band)"
+  },
+  {
+    "id": 10092,
+    "name": "好美（乐队）",
+    "t_name": "喜美(樂團)",
+    "en_name": "Yoshimi (Band)"
+  },
+  {
+    "id": 16015,
+    "name": "爱理（乐队）",
+    "t_name": "愛莉(樂團)",
+    "en_name": "Airi (Band)"
+  },
+  {
+    "id": 10093,
+    "name": "绮罗罗",
+    "t_name": "綺羅羅",
+    "en_name": "Kirara"
+  },
+  {
+    "id": 10094,
+    "name": "桃（女仆）",
+    "t_name": "桃井(女僕)",
+    "en_name": "Momoi (Maid)"
+  },
+  {
+    "id": 10095,
+    "name": "绿（女仆）",
+    "t_name": "綠(女僕)",
+    "en_name": "Midori (Maid)"
+  },
+  {
+    "id": 20036,
+    "name": "芹香（泳装）",
+    "t_name": "茜香(泳裝)",
+    "en_name": "Serika (Swimsuit)"
+  },
+  {
+    "id": 10096,
+    "name": "康娜（泳装）",
+    "t_name": "環奈(泳裝)",
+    "en_name": "Kanna (Swimsuit)"
+  },
+  {
+    "id": 20037,
+    "name": "吹雪（泳装）",
+    "t_name": "吹雪(泳裝)",
+    "en_name": "Fubuki (Swimsuit)"
+  },
+  {
+    "id": 26012,
+    "name": "桐乃（泳装）",
+    "t_name": "桐乃(泳裝)",
+    "en_name": "Kirino (Swimsuit)"
+  },
+  {
+    "id": 10097,
+    "name": "萌绘（泳装）",
+    "t_name": "萌(泳裝)",
+    "en_name": "Moe (Swimsuit)"
+  },
+  {
+    "id": 10098,
+    "name": "星野（武装）",
+    "t_name": "星野(武裝)",
+    "en_name": "Hoshino (Armed)"
+  },
+  {
+    "id": 10099,
+    "name": "星野（武装）",
+    "t_name": "星野(武裝)",
+    "en_name": "Hoshino (Armed)"
+  },
+  {
+    "id": 10100,
+    "name": "白子＊恐怖",
+    "t_name": "白子＊TERROR",
+    "en_name": "Shiroko*Terror"
+  },
+  {
+    "id": 26013,
+    "name": "亚津子（泳装）",
+    "t_name": "敦子(泳裝)",
+    "en_name": "Atsuko (Swimsuit)"
+  },
+  {
+    "id": 10101,
+    "name": "纱织（泳装）",
+    "t_name": "沙織(泳裝)",
+    "en_name": "Saori (Swimsuit)"
+  },
+  {
+    "id": 10102,
+    "name": "日和（泳装）",
+    "t_name": "日和(泳裝)",
+    "en_name": "Hiyori (Swimsuit)"
+  },
+  {
+    "id": 10103,
+    "name": "真里奈（旗袍）",
+    "t_name": "瑪麗娜(旗袍)",
+    "en_name": "Marina (Qipao)"
+  },
+  {
+    "id": 20038,
+    "name": "巴（旗袍）",
+    "t_name": "智惠(旗袍)",
+    "en_name": "Tomoe (Qipao)"
+  },
+  {
+    "id": 10104,
+    "name": "丽情",
+    "t_name": "令女",
+    "en_name": "Reijo"
+  },
+  {
+    "id": 20039,
+    "name": "妃咲",
+    "t_name": "妃姬",
+    "en_name": "Kisaki"
+  },
+  {
+    "id": 10105,
+    "name": "玛丽（偶像）",
+    "t_name": "瑪麗(偶像)",
+    "en_name": "Mari (Pop Idol)"
+  },
+  {
+    "id": 10106,
+    "name": "樱子（偶像）",
+    "t_name": "櫻子(偶像)",
+    "en_name": "Sakurako (Pop Idol)"
+  },
+  {
+    "id": 16016,
+    "name": "美祢（偶像）",
+    "t_name": "美禰(偶像)",
+    "en_name": "Mine (Pop Idol)"
+  },
+  {
+    "id": 10107,
+    "name": "千秋",
+    "t_name": "千秋",
+    "en_name": "Chiaki"
+  },
+  {
+    "id": 20040,
+    "name": "皋月",
+    "t_name": "皐月",
+    "en_name": "Satsuki"
+  },
+  {
+    "id": 10108,
+    "name": "优香（睡衣）",
+    "t_name": "優香(睡衣)",
+    "en_name": "Yuuka (Pajamas)"
+  },
+  {
+    "id": 10109,
+    "name": "诺亚（睡衣）",
+    "t_name": "乃愛(睡衣)",
+    "en_name": "Noa (Pajamas)"
+  },
+  {
+    "id": 10110,
+    "name": "圣娅",
+    "t_name": "聖亞",
+    "en_name": "Seia"
+  },
+  {
+    "id": 10112,
+    "name": "明日奈（制服）",
+    "t_name": "明日奈(制服)",
+    "en_name": "Asuna (School)"
+  },
+  {
+    "id": 26014,
+    "name": "花凛（制服）",
+    "t_name": "花凛(制服)",
+    "en_name": "Karin (School)"
+  },
+  {
+    "id": 10111,
+    "name": "妮露（制服）",
+    "t_name": "寧瑠(制服)",
+    "en_name": "Neru (School)"
+  },
+  {
+    "id": 20041,
+    "name": "莉音",
+    "t_name": "莉央",
+    "en_name": "Rio"
+  },
+  {
+    "id": 20042,
+    "name": "真纪（露营）",
+    "t_name": "真紀(露營)",
+    "en_name": "Maki (Camp)"
+  },
+  {
+    "id": 10113,
+    "name": "濑名（便服）",
+    "t_name": "瀬奈(私服)",
+    "en_name": "Sena (Casual)"
+  },
+  {
+    "id": 10114,
+    "name": "朱莉（打工）",
+    "t_name": "茱莉(打工)",
+    "en_name": "Juri (Part-Timer)"
+  },
+  {
+    "id": 20043,
+    "name": "泉（正月）",
+    "t_name": "泉(正月)",
+    "en_name": "Izumi (New Year)"
+  },
+  {
+    "id": 10115,
+    "name": "丽",
+    "t_name": "莉",
+    "en_name": "Rei"
+  },
+  {
+    "id": 20044,
+    "name": "堇（打工）",
+    "t_name": "堇(打工)",
+    "en_name": "Sumire (Part-Timer)"
+  },
+  {
+    "id": 10116,
+    "name": "纱织（礼服）",
+    "t_name": "沙織(禮服)",
+    "en_name": "Saori (Dress)"
+  },
+  {
+    "id": 10117,
+    "name": "光",
+    "t_name": "光",
+    "en_name": "Hikari"
+  },
+  {
+    "id": 10118,
+    "name": "望",
+    "t_name": "希望",
+    "en_name": "Nozomi"
+  },
+  {
+    "id": 16017,
+    "name": "青叶",
+    "t_name": "青葉",
+    "en_name": "Aoba"
+  },
+  {
+    "id": 20045,
+    "name": "菲娜（导游）",
+    "t_name": "菲娜(導覽員)",
+    "en_name": "Pina (Guide)"
+  },
+  {
+    "id": 10119,
+    "name": "名草",
+    "t_name": "名草",
+    "en_name": "Nagusa"
+  },
+  {
+    "id": 20046,
+    "name": "尼娅",
+    "t_name": "仁耶",
+    "en_name": "Niya"
+  },
+  {
+    "id": 10120,
+    "name": "夏（乐队）",
+    "t_name": "夏(樂團)",
+    "en_name": "Natsu (Band)"
+  },
+  {
+    "id": 10121,
+    "name": "紫（泳装）",
+    "t_name": "紫(泳裝)",
+    "en_name": "Yukari (Swimsuit)"
+  },
+  {
+    "id": 13014,
+    "name": "莲华（泳装）",
+    "t_name": "蓮華(泳裝)",
+    "en_name": "Renge (Swimsuit)"
+  },
+  {
+    "id": 20047,
+    "name": "桔梗（泳装）",
+    "t_name": "桔梗(泳裝)",
+    "en_name": "Kikyou (Swimsuit)"
+  },
+  {
+    "id": 10123,
+    "name": "圣娅（泳装）",
+    "t_name": "聖亞(泳裝)",
+    "en_name": "Seia (Swimsuit)"
+  },
+  {
+    "id": 10124,
+    "name": "莲见（泳装）",
+    "t_name": "蓮實(泳裝)",
+    "en_name": "Hasumi (Swimsuit)"
+  },
+  {
+    "id": 26015,
+    "name": "一花（泳装）",
+    "t_name": "一花(泳裝)",
+    "en_name": "Ichika (Swimsuit)"
+  },
+  {
+    "id": 20048,
+    "name": "渚（泳装）",
+    "t_name": "渚(泳裝)",
+    "en_name": "Nagisa (Swimsuit)"
+  },
+  {
+    "id": 10122,
+    "name": "未花（泳装）",
+    "t_name": "彌香(泳裝)",
+    "en_name": "Mika (Swimsuit)"
+  },
+  {
+    "id": 10125,
+    "name": "绘里",
+    "t_name": "繪梨",
+    "en_name": "Eri"
+  },
+  {
+    "id": 10126,
+    "name": "庚",
+    "t_name": "鹿江",
+    "en_name": "Kanoe"
+  },
+  {
+    "id": 20049,
+    "name": "美咲（泳装）",
+    "t_name": "美咲(泳裝)",
+    "en_name": "Misaki (Swimsuit)"
+  },
+  {
+    "id": 10127,
+    "name": "美代",
+    "t_name": "美代",
+    "en_name": "Miyo"
+  },
+  {
+    "id": 10128,
+    "name": "冬",
+    "t_name": "冬",
+    "en_name": "Fuyu"
+  },
+  {
+    "id": 20050,
+    "name": "律",
+    "t_name": "律",
+    "en_name": "Ritsu"
+  },
+  {
+    "id": 20051,
+    "name": "玲纱（魔法）",
+    "t_name": "澪紗(魔法少女)",
+    "en_name": "Reisa (Magical)"
+  },
+  {
+    "id": 10129,
+    "name": "铃美（魔法）",
+    "t_name": "鈴美(魔法少女)",
+    "en_name": "Suzumi (Magical)"
+  },
+  {
+    "id": 16018,
+    "name": "兰舞",
+    "t_name": "良舞",
+    "en_name": "Rabu"
+  },
+  {
+    "id": 10130,
+    "name": "昴",
+    "t_name": "昴",
+    "en_name": "Subaru"
+  },
+  {
+    "id": 10131,
+    "name": "贵音",
+    "t_name": "貴音",
+    "en_name": "Takane"
+  },
+  {
+    "id": 20052,
+    "name": "八云",
+    "t_name": "八雲",
+    "en_name": "Yakumo"
+  },
+  {
+    "id": 10132,
+    "name": "月咏（礼服）",
+    "t_name": "月夜（禮服）",
+    "en_name": "Tsukuyo (Dress)"
+  },
+  {
+    "id": 20053,
+    "name": "满（礼服）",
+    "t_name": "三千留（禮服）",
+    "en_name": "Michiru (Dress)"
+  },
+  {
+    "id": 10133,
+    "name": "莉音（武装）",
+    "t_name": "莉央（武裝）",
+    "en_name": "Rio (Armed)"
+  },
+  {
+    "id": 16019,
+    "name": "时（武装）",
+    "t_name": "季（武裝）",
+    "en_name": "Toki (Armed)"
+  },
+  {
+    "id": 20054,
+    "name": "日鞠（武装）",
+    "t_name": "陽葵（武裝）",
+    "en_name": "Himari (Armed)"
+  },
+  {
+    "id": 10134,
+    "name": "爱丽丝（武装）",
+    "t_name": "愛麗絲（武裝）",
+    "en_name": "Aris (Armed)"
+  },
+  {
+    "id": 10135,
+    "name": "柯伊",
+    "t_name": "Kei",
+    "en_name": "Kei"
+  },
+  {
+    "id": 10136,
+    "name": "艾米（武装）",
+    "t_name": "英美（武裝）",
+    "en_name": "Eimi (Armed)"
+  },
+  {
+    "id": 20055,
+    "name": "柚子（武装）",
+    "t_name": "柚子（武裝）",
+    "en_name": "Yuzu (Armed)"
+  },
+  {
+    "id": 20056,
+    "name": "小雪（睡衣）",
+    "t_name": "小雪（睡衣）",
+    "en_name": "Koyuki (Pajamas)"
+  },
+  {
+    "id": 10137,
+    "name": "木乃香",
+    "t_name": "木乃香",
+    "en_name": "Konoka"
+  },
+  {
+    "id": 10138,
+    "name": "丽奈",
+    "t_name": "玲奈",
+    "en_name": "Rena"
+  },
+  {
+    "id": 20057,
+    "name": "茜（制服）",
+    "t_name": "朱音（制服）",
+    "en_name": "Akane (School)"
+  }
 ]

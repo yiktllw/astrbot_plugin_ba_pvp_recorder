@@ -1,0 +1,8 @@
+{
+  "monitor_group_ids": {
+    "description": "要监控的群聊ID",
+    "type": "string",
+    "hint": "多个群号可用逗号或空格分隔，例如：123456, 234567",
+    "default": ""
+  }
+}

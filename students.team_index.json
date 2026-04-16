@@ -1,0 +1,2679 @@
+{
+  "strikers": {
+    "10000": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "露",
+        "爱露",
+        "阿露",
+        "傻子"
+      ],
+      "name_chs": "爱露",
+      "name_cht": "亞瑠",
+      "name_en": "Aru"
+    },
+    "10001": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "艾",
+        "子龙",
+        "艾子龙"
+      ],
+      "name_chs": "艾米",
+      "name_cht": "英美",
+      "name_en": "Eimi"
+    },
+    "10002": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "神秘狙"
+      ],
+      "name_chs": "晴奈",
+      "name_cht": "羽留奈",
+      "name_en": "Haruna"
+    },
+    "10003": {
+      "TacticRole": "Supporter",
+      "Range": 650,
+      "abbr": [
+        "123",
+        "hifumi",
+        "鸡妹"
+      ],
+      "name_chs": "日富美",
+      "name_cht": "日步美",
+      "name_en": "Hifumi"
+    },
+    "10004": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "标日奈",
+        "普日奈"
+      ],
+      "name_chs": "日奈",
+      "name_cht": "陽奈",
+      "name_en": "Hina"
+    },
+    "10005": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "哈基野",
+        "大叔",
+        "标星野"
+      ],
+      "name_chs": "星野",
+      "name_cht": "星野",
+      "name_en": "Hoshino"
+    },
+    "10006": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "佐仓",
+        "佐",
+        "佐三枪",
+        "三枪",
+        "左",
+        "←",
+        "佐批",
+        "佐皮",
+        "左批",
+        "左皮"
+      ],
+      "name_chs": "伊织",
+      "name_cht": "伊織",
+      "name_en": "Iori"
+    },
+    "10007": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "兄弟"
+      ],
+      "name_chs": "真纪",
+      "name_cht": "真紀",
+      "name_en": "Maki"
+    },
+    "10008": {
+      "TacticRole": "DamageDealer",
+      "Range": 450,
+      "abbr": [
+        "尼禄"
+      ],
+      "name_chs": "妮露",
+      "name_cht": "寧瑠",
+      "name_en": "Neru"
+    },
+    "10009": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "老八",
+        "汉堡"
+      ],
+      "name_chs": "泉",
+      "name_cht": "泉",
+      "name_en": "Izumi"
+    },
+    "10010": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "标白子",
+        "xcw",
+        "小仓唯"
+      ],
+      "name_chs": "白子",
+      "name_cht": "白子",
+      "name_en": "Shiroko"
+    },
+    "10011": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "s",
+        "瞬",
+        "大瞬"
+      ],
+      "name_chs": "瞬",
+      "name_cht": "旬",
+      "name_en": "Shun"
+    },
+    "10012": {
+      "TacticRole": "DamageDealer",
+      "Range": 450,
+      "abbr": [
+        "j",
+        "体育生"
+      ],
+      "name_chs": "堇",
+      "name_cht": "堇",
+      "name_en": "Sumire"
+    },
+    "10013": {
+      "TacticRole": "DamageDealer",
+      "Range": 450,
+      "abbr": [
+        "跑",
+        "鹤",
+        "颜",
+        "颜艺",
+        "y"
+      ],
+      "name_chs": "鹤城",
+      "name_cht": "弦生",
+      "name_en": "Tsurugi"
+    },
+    "13000": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [
+        "女仆",
+        "朱音"
+      ],
+      "name_chs": "茜",
+      "name_cht": "朱音",
+      "name_en": "Akane"
+    },
+    "13001": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "芝士",
+        "知世"
+      ],
+      "name_chs": "千世",
+      "name_cht": "知世",
+      "name_en": "Chise"
+    },
+    "13002": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [],
+      "name_chs": "明里",
+      "name_cht": "亞伽里",
+      "name_en": "Akari"
+    },
+    "13003": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "莲"
+      ],
+      "name_chs": "莲见",
+      "name_cht": "蓮實",
+      "name_en": "Hasumi"
+    },
+    "13004": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "nnm",
+        "富婆",
+        "富",
+        "糯糯米",
+        "糯"
+      ],
+      "name_chs": "野宫",
+      "name_cht": "野乃美",
+      "name_en": "Nonomi"
+    },
+    "13005": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [
+        "佳处",
+        "佳木斯",
+        "佳",
+        "佳出"
+      ],
+      "name_chs": "佳代子",
+      "name_cht": "佳世子",
+      "name_en": "Kayoko"
+    },
+    "13006": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [],
+      "name_chs": "睦月",
+      "name_cht": "無月",
+      "name_en": "Mutsuki"
+    },
+    "13007": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "淳",
+        "纯"
+      ],
+      "name_chs": "纯子",
+      "name_cht": "淳子",
+      "name_en": "Junko"
+    },
+    "13008": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "黑猫"
+      ],
+      "name_chs": "芹香",
+      "name_cht": "茜香",
+      "name_en": "Serika"
+    },
+    "13009": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "狗",
+        "大狗",
+        "狗盾"
+      ],
+      "name_chs": "椿",
+      "name_cht": "椿",
+      "name_en": "Tsubaki"
+    },
+    "13010": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "邮",
+        "邮箱",
+        "📪",
+        "100kg"
+      ],
+      "name_chs": "优香",
+      "name_cht": "優香",
+      "name_en": "Yuuka"
+    },
+    "16000": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "遥"
+      ],
+      "name_chs": "春香",
+      "name_cht": "遙香",
+      "name_en": "Haruka"
+    },
+    "16001": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "亚丝娜"
+      ],
+      "name_chs": "明日奈",
+      "name_cht": "明日奈",
+      "name_en": "Asuna"
+    },
+    "16002": {
+      "TacticRole": "Supporter",
+      "Range": 750,
+      "abbr": [
+        "小鸟"
+      ],
+      "name_chs": "琴里",
+      "name_cht": "亞都梨",
+      "name_en": "Kotori"
+    },
+    "16003": {
+      "TacticRole": "Supporter",
+      "Range": 650,
+      "abbr": [
+        "闪光弹",
+        "闪"
+      ],
+      "name_chs": "铃美",
+      "name_cht": "鈴美",
+      "name_en": "Suzumi"
+    },
+    "16004": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [],
+      "name_chs": "菲娜",
+      "name_cht": "菲娜",
+      "name_en": "Pina"
+    },
+    "10014": {
+      "TacticRole": "DamageDealer",
+      "Range": 450,
+      "abbr": [
+        "小狐狸"
+      ],
+      "name_chs": "泉奈",
+      "name_cht": "伊樹菜",
+      "name_en": "Izuna"
+    },
+    "10015": {
+      "TacticRole": "DamageDealer",
+      "Range": 850,
+      "abbr": [
+        "al1s",
+        "人机",
+        "入机",
+        "仁济"
+      ],
+      "name_chs": "爱丽丝",
+      "name_cht": "愛麗絲",
+      "name_en": "Aris"
+    },
+    "10016": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "小绿"
+      ],
+      "name_chs": "绿",
+      "name_cht": "綠",
+      "name_en": "Midori"
+    },
+    "13011": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "小桃",
+        "王小桃",
+        "小兆",
+        "王小兆"
+      ],
+      "name_chs": "桃",
+      "name_cht": "桃井",
+      "name_en": "Momoi"
+    },
+    "10017": {
+      "TacticRole": "DamageDealer",
+      "Range": 550,
+      "abbr": [
+        "斯大萝",
+        "萝",
+        "萝处"
+      ],
+      "name_chs": "切里诺",
+      "name_cht": "潔莉諾",
+      "name_en": "Cherino"
+    },
+    "10018": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "柚",
+        "柚子炮"
+      ],
+      "name_chs": "柚子",
+      "name_cht": "柚子",
+      "name_en": "Yuzu"
+    },
+    "10019": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [],
+      "name_chs": "梓",
+      "name_cht": "梓",
+      "name_en": "Azusa"
+    },
+    "10020": {
+      "TacticRole": "Healer",
+      "Range": 750,
+      "abbr": [],
+      "name_chs": "小春",
+      "name_cht": "小春",
+      "name_en": "Koharu"
+    },
+    "10021": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "水梓"
+      ],
+      "name_chs": "梓（泳装）",
+      "name_cht": "梓(泳裝)",
+      "name_en": "Azusa (Swimsuit)"
+    },
+    "16005": {
+      "TacticRole": "DamageDealer",
+      "Range": 450,
+      "abbr": [
+        "水鹤城"
+      ],
+      "name_chs": "鹤城（泳装）",
+      "name_cht": "弦生(泳裝)",
+      "name_en": "Tsurugi (Swimsuit)"
+    },
+    "10022": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "水日奈"
+      ],
+      "name_chs": "日奈（泳装）",
+      "name_cht": "陽奈(泳裝)",
+      "name_en": "Hina (Swimsuit)"
+    },
+    "10023": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "水佐",
+        "水伊织",
+        "水佐仓"
+      ],
+      "name_chs": "伊织（泳装）",
+      "name_cht": "伊織(泳裝)",
+      "name_en": "Iori (Swimsuit)"
+    },
+    "16006": {
+      "TacticRole": "Supporter",
+      "Range": 750,
+      "abbr": [
+        "水老八",
+        "水西瓜"
+      ],
+      "name_chs": "泉（泳装）",
+      "name_cht": "泉(泳裝)",
+      "name_en": "Izumi (Swimsuit)"
+    },
+    "10024": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "小车唯",
+        "单车白子",
+        "车白"
+      ],
+      "name_chs": "白子（骑行）",
+      "name_cht": "白子(單車)",
+      "name_en": "Shiroko (Cycling)"
+    },
+    "10025": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "幼瞬",
+        "小瞬"
+      ],
+      "name_chs": "瞬（小）",
+      "name_cht": "旬(幼女)",
+      "name_en": "Shun (Small)"
+    },
+    "13012": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [
+        "烟雾弹"
+      ],
+      "name_chs": "桐乃",
+      "name_cht": "桐乃",
+      "name_en": "Kirino"
+    },
+    "10026": {
+      "TacticRole": "Tanker",
+      "Range": 450,
+      "abbr": [
+        "红兔",
+        "兔尼露",
+        "兔妮露"
+      ],
+      "name_chs": "妮露（邦妮）",
+      "name_cht": "寧瑠(兔女郎)",
+      "name_en": "Neru (Bunny)"
+    },
+    "10027": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "黑兔"
+      ],
+      "name_chs": "花凛（邦妮）",
+      "name_cht": "花凛(兔女郎)",
+      "name_en": "Karin (Bunny)"
+    },
+    "10028": {
+      "TacticRole": "Supporter",
+      "Range": 650,
+      "abbr": [
+        "蓝兔"
+      ],
+      "name_chs": "明日奈（邦妮）",
+      "name_cht": "明日奈(兔女郎)",
+      "name_en": "Asuna (Bunny)"
+    },
+    "10029": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "小夏"
+      ],
+      "name_chs": "夏",
+      "name_cht": "夏",
+      "name_en": "Natsu"
+    },
+    "10030": {
+      "TacticRole": "Supporter",
+      "Range": 650,
+      "abbr": [
+        "温泉千夏"
+      ],
+      "name_chs": "千夏（温泉）",
+      "name_cht": "千夏(溫泉)",
+      "name_en": "Chinatsu (Hot Spring)"
+    },
+    "16007": {
+      "TacticRole": "Supporter",
+      "Range": 750,
+      "abbr": [],
+      "name_chs": "巴",
+      "name_cht": "智惠",
+      "name_en": "Tomoe"
+    },
+    "10031": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "春露"
+      ],
+      "name_chs": "爱露（新年）",
+      "name_cht": "亞瑠(正月)",
+      "name_en": "Aru (New Year)"
+    },
+    "10032": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "春月",
+        "月"
+      ],
+      "name_chs": "睦月（新年）",
+      "name_cht": "無月(正月)",
+      "name_en": "Mutsuki (New Year)"
+    },
+    "10033": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "藻",
+        "大狐狸"
+      ],
+      "name_chs": "若藻",
+      "name_cht": "若藻",
+      "name_en": "Wakamo"
+    },
+    "16008": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [],
+      "name_chs": "吹雪",
+      "name_cht": "吹雪",
+      "name_en": "Fubuki"
+    },
+    "10034": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [],
+      "name_chs": "三森",
+      "name_cht": "三森",
+      "name_en": "Mimori"
+    },
+    "10035": {
+      "TacticRole": "Supporter",
+      "Range": 750,
+      "abbr": [
+        "ui"
+      ],
+      "name_chs": "忧",
+      "name_cht": "憂",
+      "name_en": "Ui"
+    },
+    "10036": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [],
+      "name_chs": "日向",
+      "name_cht": "日向",
+      "name_en": "Hinata"
+    },
+    "10037": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "保洁",
+        "保",
+        "保洁阿姨",
+        "阿姨",
+        "姨"
+      ],
+      "name_chs": "真里奈",
+      "name_cht": "瑪麗娜",
+      "name_en": "Marina"
+    },
+    "10038": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "宫"
+      ],
+      "name_chs": "宫子",
+      "name_cht": "都子",
+      "name_en": "Miyako"
+    },
+    "10039": {
+      "TacticRole": "Supporter",
+      "Range": 750,
+      "abbr": [],
+      "name_chs": "美游",
+      "name_cht": "美優",
+      "name_en": "Miyu"
+    },
+    "16009": {
+      "TacticRole": "DamageDealer",
+      "Range": 450,
+      "abbr": [
+        "小满"
+      ],
+      "name_chs": "满",
+      "name_cht": "三千留",
+      "name_en": "Michiru"
+    },
+    "10040": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "树忍",
+        "树"
+      ],
+      "name_chs": "月咏",
+      "name_cht": "月夜",
+      "name_en": "Tsukuyo"
+    },
+    "10041": {
+      "TacticRole": "DamageDealer",
+      "Range": 850,
+      "abbr": [],
+      "name_chs": "美咲",
+      "name_cht": "美咲",
+      "name_en": "Misaki"
+    },
+    "10042": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "公",
+        "公主",
+        "敦子",
+        "敦"
+      ],
+      "name_chs": "亚津子",
+      "name_cht": "敦子",
+      "name_en": "Atsuko"
+    },
+    "10043": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "水藻",
+        "水若藻"
+      ],
+      "name_chs": "若藻（泳装）",
+      "name_cht": "若藻(泳裝)",
+      "name_en": "Wakamo (Swimsuit)"
+    },
+    "10044": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "水野宫",
+        "水富婆",
+        "水nnm",
+        "水糯糯米"
+      ],
+      "name_chs": "野宫（泳装）",
+      "name_cht": "野乃美(泳裝)",
+      "name_en": "Nonomi (Swimsuit)"
+    },
+    "10045": {
+      "TacticRole": "Supporter",
+      "Range": 450,
+      "abbr": [
+        "水星野",
+        "水大叔",
+        "水星"
+      ],
+      "name_chs": "星野（泳装）",
+      "name_cht": "星野(泳裝)",
+      "name_en": "Hoshino (Swimsuit)"
+    },
+    "10046": {
+      "TacticRole": "DamageDealer",
+      "Range": 450,
+      "abbr": [
+        "水泉奈",
+        "水小狐狸"
+      ],
+      "name_chs": "泉奈（泳装）",
+      "name_cht": "伊樹菜(泳裝)",
+      "name_en": "Izuna (Swimsuit)"
+    },
+    "10047": {
+      "TacticRole": "Supporter",
+      "Range": 650,
+      "abbr": [
+        "水千世",
+        "水千",
+        "水知世",
+        "水芝士"
+      ],
+      "name_chs": "千世（泳装）",
+      "name_cht": "知世(泳裝)",
+      "name_en": "Chise (Swimsuit)"
+    },
+    "10048": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "砂纸",
+        "纱纸"
+      ],
+      "name_chs": "纱织",
+      "name_cht": "沙織",
+      "name_en": "Saori"
+    },
+    "10049": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "肥猫",
+        "千纱"
+      ],
+      "name_chs": "和纱",
+      "name_cht": "千紗",
+      "name_en": "Kazusa"
+    },
+    "10050": {
+      "TacticRole": "Healer",
+      "Range": 650,
+      "abbr": [
+        "kkn",
+        "口口奈"
+      ],
+      "name_chs": "心奈",
+      "name_cht": "心菜",
+      "name_en": "Kokona"
+    },
+    "10051": {
+      "TacticRole": "DamageDealer",
+      "Range": 450,
+      "abbr": [],
+      "name_chs": "歌原（应援团）",
+      "name_cht": "詠葉(應援團)",
+      "name_en": "Utaha (Cheer Squad)"
+    },
+    "10052": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [
+        "noa"
+      ],
+      "name_chs": "诺亚",
+      "name_cht": "乃愛",
+      "name_en": "Noa"
+    },
+    "16010": {
+      "TacticRole": "DamageDealer",
+      "Range": 850,
+      "abbr": [
+        "拉拉响",
+        "拉响",
+        "啦响",
+        "啦啦响"
+      ],
+      "name_chs": "响（应援团）",
+      "name_cht": "響(應援團)",
+      "name_en": "Hibiki (Cheer Squad)"
+    },
+    "10053": {
+      "TacticRole": "Tanker",
+      "Range": 450,
+      "abbr": [
+        "体香",
+        "体邮箱",
+        "体优香"
+      ],
+      "name_chs": "优香（体操服）",
+      "name_cht": "優香(體育服)",
+      "name_en": "Yuuka (Track)"
+    },
+    "10054": {
+      "TacticRole": "Healer",
+      "Range": 550,
+      "abbr": [
+        "体玛"
+      ],
+      "name_chs": "玛丽（体操服）",
+      "name_cht": "瑪麗(體育服)",
+      "name_en": "Mari (Track)"
+    },
+    "16011": {
+      "TacticRole": "DamageDealer",
+      "Range": 850,
+      "abbr": [
+        "体莲",
+        "体莲见"
+      ],
+      "name_chs": "莲见（体操服）",
+      "name_cht": "蓮實(體育服)",
+      "name_en": "Hasumi (Track)"
+    },
+    "10055": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [],
+      "name_chs": "时雨",
+      "name_cht": "時雨",
+      "name_en": "Shigure"
+    },
+    "10056": {
+      "TacticRole": "Supporter",
+      "Range": 650,
+      "abbr": [
+        "圣小护",
+        "圣小护士",
+        "圣诞小护士"
+      ],
+      "name_chs": "芹娜（圣诞）",
+      "name_cht": "芹奈(聖誕節)",
+      "name_en": "Serina (Christmas)"
+    },
+    "10057": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "n",
+        "奈",
+        "春奈"
+      ],
+      "name_chs": "晴奈（新年）",
+      "name_cht": "羽留奈(正月)",
+      "name_en": "Haruna (New Year)"
+    },
+    "16012": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "春纯",
+        "春纯子",
+        "春淳子",
+        "春淳"
+      ],
+      "name_chs": "纯子（新年）",
+      "name_cht": "淳子(正月)",
+      "name_en": "Junko (New Year)"
+    },
+    "10058": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "团长"
+      ],
+      "name_chs": "美祢",
+      "name_cht": "美禰",
+      "name_en": "Mine"
+    },
+    "10059": {
+      "TacticRole": "DamageDealer",
+      "Range": 450,
+      "abbr": [
+        "未",
+        "未花",
+        "mika"
+      ],
+      "name_chs": "未花",
+      "name_cht": "彌香",
+      "name_en": "Mika"
+    },
+    "10060": {
+      "TacticRole": "DamageDealer",
+      "Range": 450,
+      "abbr": [],
+      "name_chs": "惠",
+      "name_cht": "惠",
+      "name_en": "Megu"
+    },
+    "10061": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [],
+      "name_chs": "樱子",
+      "name_cht": "櫻子",
+      "name_en": "Sakurako"
+    },
+    "10062": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "toki",
+        "小时"
+      ],
+      "name_chs": "时",
+      "name_cht": "季",
+      "name_en": "Toki"
+    },
+    "10063": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [],
+      "name_chs": "小雪",
+      "name_cht": "小雪",
+      "name_en": "Koyuki"
+    },
+    "10064": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [
+        "春佳"
+      ],
+      "name_chs": "佳代子（新年）",
+      "name_cht": "佳世子(正月)",
+      "name_en": "Kayoko (New Year)"
+    },
+    "10065": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [],
+      "name_chs": "果穗",
+      "name_cht": "佳穗",
+      "name_en": "Kaho"
+    },
+    "10066": {
+      "TacticRole": "DamageDealer",
+      "Range": 850,
+      "abbr": [
+        "妹爱",
+        "女仆爱",
+        "女仆爱丽丝"
+      ],
+      "name_chs": "爱丽丝（女仆）",
+      "name_cht": "愛麗絲(女僕)",
+      "name_en": "Aris (Maid)"
+    },
+    "10067": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "兔时"
+      ],
+      "name_chs": "时（邦妮）",
+      "name_cht": "季(兔女郎)",
+      "name_en": "Toki (Bunny)"
+    },
+    "10068": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "芋",
+        "芋泥"
+      ],
+      "name_chs": "玲纱",
+      "name_cht": "澪紗",
+      "name_en": "Reisa"
+    },
+    "10069": {
+      "TacticRole": "Healer",
+      "Range": 450,
+      "abbr": [
+        "炒饭",
+        "蛋炒饭"
+      ],
+      "name_chs": "瑠海",
+      "name_cht": "瑠美",
+      "name_en": "Rumi"
+    },
+    "10070": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [],
+      "name_chs": "南",
+      "name_cht": "美奈",
+      "name_en": "Mina"
+    },
+    "10071": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "水宫",
+        "水宫子"
+      ],
+      "name_chs": "宫子（泳装）",
+      "name_cht": "都子(泳裝)",
+      "name_en": "Miyako (Swimsuit)"
+    },
+    "10072": {
+      "TacticRole": "Supporter",
+      "Range": 750,
+      "abbr": [
+        "水咲"
+      ],
+      "name_chs": "咲（泳装）",
+      "name_cht": "咲希(泳裝)",
+      "name_en": "Saki (Swimsuit)"
+    },
+    "10073": {
+      "TacticRole": "Supporter",
+      "Range": 750,
+      "abbr": [
+        "水忧",
+        "水ui"
+      ],
+      "name_chs": "忧（泳装）",
+      "name_cht": "憂(泳裝)",
+      "name_en": "Ui (Swimsuit)"
+    },
+    "16013": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "水春",
+        "水小春",
+        "泳春"
+      ],
+      "name_chs": "小春（泳装）",
+      "name_cht": "小春(泳裝)",
+      "name_en": "Koharu (Swimsuit)"
+    },
+    "10074": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "花",
+        "水花",
+        "水花子"
+      ],
+      "name_chs": "花子（泳装）",
+      "name_cht": "花子(泳裝)",
+      "name_en": "Hanako (Swimsuit)"
+    },
+    "10075": {
+      "TacticRole": "DamageDealer",
+      "Range": 550,
+      "abbr": [],
+      "name_chs": "芽瑠",
+      "name_cht": "愛瑠",
+      "name_en": "Meru"
+    },
+    "13013": {
+      "TacticRole": "DamageDealer",
+      "Range": 850,
+      "abbr": [],
+      "name_chs": "红叶",
+      "name_cht": "紅葉",
+      "name_en": "Momiji"
+    },
+    "10076": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "鸟",
+        "拉鸟",
+        "拉拉鸟",
+        "啦鸟",
+        "啦啦鸟"
+      ],
+      "name_chs": "琴里（应援团）",
+      "name_cht": "亞都梨(應援團)",
+      "name_en": "Kotori (Cheer Squad)"
+    },
+    "10077": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [],
+      "name_chs": "一花",
+      "name_cht": "一花",
+      "name_en": "Ichika"
+    },
+    "10078": {
+      "TacticRole": "DamageDealer",
+      "Range": 550,
+      "abbr": [],
+      "name_chs": "霞",
+      "name_cht": "佳澄",
+      "name_en": "Kasumi"
+    },
+    "10079": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "炮姐"
+      ],
+      "name_chs": "御坂美琴",
+      "name_cht": "御坂美琴",
+      "name_en": "Misaka Mikoto"
+    },
+    "10080": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [
+        "食峰"
+      ],
+      "name_chs": "食蜂操祈",
+      "name_cht": "食蜂操祈",
+      "name_en": "Shokuhou Misaki"
+    },
+    "10081": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "油咖喱"
+      ],
+      "name_chs": "紫",
+      "name_cht": "紫",
+      "name_en": "Yukari"
+    },
+    "10082": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "b莲华"
+      ],
+      "name_chs": "莲华",
+      "name_cht": "蓮華",
+      "name_en": "Renge"
+    },
+    "10083": {
+      "TacticRole": "Supporter",
+      "Range": 750,
+      "abbr": [
+        "哈基梗"
+      ],
+      "name_chs": "桔梗",
+      "name_cht": "桔梗",
+      "name_en": "Kikyou"
+    },
+    "10084": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [
+        "山芋",
+        "山玉"
+      ],
+      "name_chs": "小玉（露营）",
+      "name_cht": "小玉(露營)",
+      "name_en": "Kotama (Camp)"
+    },
+    "10085": {
+      "TacticRole": "Supporter",
+      "Range": 650,
+      "abbr": [
+        "红薯"
+      ],
+      "name_chs": "晴（露营）",
+      "name_cht": "晴(露營)",
+      "name_en": "Hare (Camp)"
+    },
+    "10087": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [
+        "礼亚",
+        "礼亚子",
+        "礼服亚子"
+      ],
+      "name_chs": "亚子（礼服）",
+      "name_cht": "亞子(禮服)",
+      "name_en": "Ako (Dress)"
+    },
+    "16014": {
+      "TacticRole": "Supporter",
+      "Range": 650,
+      "abbr": [],
+      "name_chs": "伊吹",
+      "name_cht": "伊吹",
+      "name_en": "Ibuki"
+    },
+    "10086": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "礼奈",
+        "礼服日奈"
+      ],
+      "name_chs": "日奈（礼服）",
+      "name_cht": "陽奈(禮服)",
+      "name_en": "Hina (Dress)"
+    },
+    "10088": {
+      "TacticRole": "DamageDealer",
+      "Range": 550,
+      "abbr": [
+        "礼佳",
+        "礼服佳代子"
+      ],
+      "name_chs": "佳代子（礼服）",
+      "name_cht": "佳世子(禮服)",
+      "name_en": "Kayoko (Dress)"
+    },
+    "10089": {
+      "TacticRole": "Supporter",
+      "Range": 750,
+      "abbr": [
+        "礼露",
+        "礼服阿露"
+      ],
+      "name_chs": "爱露（礼服）",
+      "name_cht": "亞瑠(禮服)",
+      "name_en": "Aru (Dress)"
+    },
+    "10090": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [],
+      "name_chs": "海香",
+      "name_cht": "海花",
+      "name_en": "Umika"
+    },
+    "10091": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "乐队猫",
+        "乐队和纱"
+      ],
+      "name_chs": "和纱（乐队）",
+      "name_cht": "千紗(樂團)",
+      "name_en": "Kazusa (Band)"
+    },
+    "10092": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "乐队好美"
+      ],
+      "name_chs": "好美（乐队）",
+      "name_cht": "喜美(樂團)",
+      "name_en": "Yoshimi (Band)"
+    },
+    "16015": {
+      "TacticRole": "DamageDealer",
+      "Range": 450,
+      "abbr": [
+        "乐队爱理"
+      ],
+      "name_chs": "爱理（乐队）",
+      "name_cht": "愛莉(樂團)",
+      "name_en": "Airi (Band)"
+    },
+    "10093": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [],
+      "name_chs": "绮罗罗",
+      "name_cht": "綺羅羅",
+      "name_en": "Kirara"
+    },
+    "10094": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "女仆桃",
+        "妹桃"
+      ],
+      "name_chs": "桃（女仆）",
+      "name_cht": "桃井(女僕)",
+      "name_en": "Momoi (Maid)"
+    },
+    "10095": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "女仆绿",
+        "妹绿"
+      ],
+      "name_chs": "绿（女仆）",
+      "name_cht": "綠(女僕)",
+      "name_en": "Midori (Maid)"
+    },
+    "10096": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [
+        "水局",
+        "水康娜",
+        "水局长"
+      ],
+      "name_chs": "康娜（泳装）",
+      "name_cht": "環奈(泳裝)",
+      "name_en": "Kanna (Swimsuit)"
+    },
+    "10097": {
+      "TacticRole": "DamageDealer",
+      "Range": 550,
+      "abbr": [
+        "水萌绘",
+        "水moe"
+      ],
+      "name_chs": "萌绘（泳装）",
+      "name_cht": "萌(泳裝)",
+      "name_en": "Moe (Swimsuit)"
+    },
+    "10098": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "防星",
+        "防星野",
+        "盾星",
+        "盾星野",
+        "攻星",
+        "攻星野",
+        "肘星",
+        "肘星野",
+        "肘"
+      ],
+      "name_chs": "星野（武装）",
+      "name_cht": "星野(武裝)",
+      "name_en": "Hoshino (Armed)"
+    },
+    "10099": {
+      "TacticRole": "DamageDealer",
+      "Range": 350,
+      "abbr": [
+        "防星",
+        "防星野",
+        "盾星",
+        "盾星野",
+        "攻星",
+        "攻星野",
+        "肘星",
+        "肘星野",
+        "肘"
+      ],
+      "name_chs": "星野（武装）",
+      "name_cht": "星野(武裝)",
+      "name_en": "Hoshino (Armed)"
+    },
+    "10100": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "黑",
+        "黑子",
+        "大白子"
+      ],
+      "name_chs": "白子＊恐怖",
+      "name_cht": "白子＊TERROR",
+      "name_en": "Shiroko*Terror"
+    },
+    "10101": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "水纱织"
+      ],
+      "name_chs": "纱织（泳装）",
+      "name_cht": "沙織(泳裝)",
+      "name_en": "Saori (Swimsuit)"
+    },
+    "10102": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "水日和"
+      ],
+      "name_chs": "日和（泳装）",
+      "name_cht": "日和(泳裝)",
+      "name_en": "Hiyori (Swimsuit)"
+    },
+    "10103": {
+      "TacticRole": "DamageDealer",
+      "Range": 350,
+      "abbr": [
+        "旗袍保洁",
+        "旗洁",
+        "僵尸"
+      ],
+      "name_chs": "真里奈（旗袍）",
+      "name_cht": "瑪麗娜(旗袍)",
+      "name_en": "Marina (Qipao)"
+    },
+    "10104": {
+      "TacticRole": "Supporter",
+      "Range": 650,
+      "abbr": [],
+      "name_chs": "丽情",
+      "name_cht": "令女",
+      "name_en": "Reijo"
+    },
+    "10105": {
+      "TacticRole": "Healer",
+      "Range": 550,
+      "abbr": [
+        "偶玛",
+        "爱玛",
+        "偶像玛丽"
+      ],
+      "name_chs": "玛丽（偶像）",
+      "name_cht": "瑪麗(偶像)",
+      "name_en": "Mari (Pop Idol)"
+    },
+    "10106": {
+      "TacticRole": "Supporter",
+      "Range": 650,
+      "abbr": [],
+      "name_chs": "樱子（偶像）",
+      "name_cht": "櫻子(偶像)",
+      "name_en": "Sakurako (Pop Idol)"
+    },
+    "16016": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "美团",
+        "偶像团长",
+        "偶像美祢"
+      ],
+      "name_chs": "美祢（偶像）",
+      "name_cht": "美禰(偶像)",
+      "name_en": "Mine (Pop Idol)"
+    },
+    "10107": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [],
+      "name_chs": "千秋",
+      "name_cht": "千秋",
+      "name_en": "Chiaki"
+    },
+    "10108": {
+      "TacticRole": "Tanker",
+      "Range": 450,
+      "abbr": [
+        "睡衣优香",
+        "睡衣邮箱"
+      ],
+      "name_chs": "优香（睡衣）",
+      "name_cht": "優香(睡衣)",
+      "name_en": "Yuuka (Pajamas)"
+    },
+    "10109": {
+      "TacticRole": "DamageDealer",
+      "Range": 550,
+      "abbr": [
+        "睡衣诺亚",
+        "睡诺"
+      ],
+      "name_chs": "诺亚（睡衣）",
+      "name_cht": "乃愛(睡衣)",
+      "name_en": "Noa (Pajamas)"
+    },
+    "10110": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [],
+      "name_chs": "圣娅",
+      "name_cht": "聖亞",
+      "name_en": "Seia"
+    },
+    "10112": {
+      "TacticRole": "Supporter",
+      "Range": 650,
+      "abbr": [
+        "jk明日奈",
+        "制服明日奈"
+      ],
+      "name_chs": "明日奈（制服）",
+      "name_cht": "明日奈(制服)",
+      "name_en": "Asuna (School)"
+    },
+    "10111": {
+      "TacticRole": "DamageDealer",
+      "Range": 450,
+      "abbr": [
+        "jk尼露",
+        "制服尼露",
+        "jk妮露",
+        "制服妮露"
+      ],
+      "name_chs": "妮露（制服）",
+      "name_cht": "寧瑠(制服)",
+      "name_en": "Neru (School)"
+    },
+    "10113": {
+      "TacticRole": "Healer",
+      "Range": 650,
+      "abbr": [
+        "私服濑名",
+        "私家车",
+        "便服濑名"
+      ],
+      "name_chs": "濑名（便服）",
+      "name_cht": "瀬奈(私服)",
+      "name_en": "Sena (Casual)"
+    },
+    "10114": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "工朱",
+        "打工朱莉",
+        "工牛"
+      ],
+      "name_chs": "朱莉（打工）",
+      "name_cht": "茱莉(打工)",
+      "name_en": "Juri (Part-Timer)"
+    },
+    "10115": {
+      "TacticRole": "DamageDealer",
+      "Range": 850,
+      "abbr": [],
+      "name_chs": "丽",
+      "name_cht": "莉",
+      "name_en": "Rei"
+    },
+    "10116": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "礼纱织",
+        "礼服纱织",
+        "礼砂纸"
+      ],
+      "name_chs": "纱织（礼服）",
+      "name_cht": "沙織(禮服)",
+      "name_en": "Saori (Dress)"
+    },
+    "10117": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [
+        "小光"
+      ],
+      "name_chs": "光",
+      "name_cht": "光",
+      "name_en": "Hikari"
+    },
+    "10118": {
+      "TacticRole": "DamageDealer",
+      "Range": 550,
+      "abbr": [
+        "小望"
+      ],
+      "name_chs": "望",
+      "name_cht": "希望",
+      "name_en": "Nozomi"
+    },
+    "16017": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [],
+      "name_chs": "青叶",
+      "name_cht": "青葉",
+      "name_en": "Aoba"
+    },
+    "10119": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [],
+      "name_chs": "名草",
+      "name_cht": "名草",
+      "name_en": "Nagusa"
+    },
+    "10120": {
+      "TacticRole": "Healer",
+      "Range": 450,
+      "abbr": [
+        "乐队夏",
+        "乐队小夏"
+      ],
+      "name_chs": "夏（乐队）",
+      "name_cht": "夏(樂團)",
+      "name_en": "Natsu (Band)"
+    },
+    "10121": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "水紫"
+      ],
+      "name_chs": "紫（泳装）",
+      "name_cht": "紫(泳裝)",
+      "name_en": "Yukari (Swimsuit)"
+    },
+    "13014": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "水莲华"
+      ],
+      "name_chs": "莲华（泳装）",
+      "name_cht": "蓮華(泳裝)",
+      "name_en": "Renge (Swimsuit)"
+    },
+    "10123": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [
+        "水圣娅"
+      ],
+      "name_chs": "圣娅（泳装）",
+      "name_cht": "聖亞(泳裝)",
+      "name_en": "Seia (Swimsuit)"
+    },
+    "10124": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "水莲见"
+      ],
+      "name_chs": "莲见（泳装）",
+      "name_cht": "蓮實(泳裝)",
+      "name_en": "Hasumi (Swimsuit)"
+    },
+    "10122": {
+      "TacticRole": "DamageDealer",
+      "Range": 450,
+      "abbr": [
+        "水未花",
+        "沬花",
+        "沫花"
+      ],
+      "name_chs": "未花（泳装）",
+      "name_cht": "彌香(泳裝)",
+      "name_en": "Mika (Swimsuit)"
+    },
+    "10125": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [],
+      "name_chs": "绘里",
+      "name_cht": "繪梨",
+      "name_en": "Eri"
+    },
+    "10126": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "鹿江",
+        "鹿"
+      ],
+      "name_chs": "庚",
+      "name_cht": "鹿江",
+      "name_en": "Kanoe"
+    },
+    "10127": {
+      "TacticRole": "Supporter",
+      "Range": 750,
+      "abbr": [],
+      "name_chs": "美代",
+      "name_cht": "美代",
+      "name_en": "Miyo"
+    },
+    "10128": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [],
+      "name_chs": "冬",
+      "name_cht": "冬",
+      "name_en": "Fuyu"
+    },
+    "10129": {
+      "TacticRole": "Supporter",
+      "Range": 650,
+      "abbr": [
+        "魔闪",
+        "魔法闪光弹"
+      ],
+      "name_chs": "铃美（魔法）",
+      "name_cht": "鈴美(魔法少女)",
+      "name_en": "Suzumi (Magical)"
+    },
+    "16018": {
+      "TacticRole": "DamageDealer",
+      "Range": 450,
+      "abbr": [],
+      "name_chs": "兰舞",
+      "name_cht": "良舞",
+      "name_en": "Rabu"
+    },
+    "10130": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [],
+      "name_chs": "昴",
+      "name_cht": "昴",
+      "name_en": "Subaru"
+    },
+    "10131": {
+      "TacticRole": "Healer",
+      "Range": 550,
+      "abbr": [],
+      "name_chs": "贵音",
+      "name_cht": "貴音",
+      "name_en": "Takane"
+    },
+    "10132": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [
+        "礼树",
+        "礼服月咏"
+      ],
+      "name_chs": "月咏（礼服）",
+      "name_cht": "月夜（禮服）",
+      "name_en": "Tsukuyo (Dress)"
+    },
+    "10133": {
+      "TacticRole": "DamageDealer",
+      "Range": 550,
+      "abbr": [
+        "临战莉音"
+      ],
+      "name_chs": "莉音（武装）",
+      "name_cht": "莉央（武裝）",
+      "name_en": "Rio (Armed)"
+    },
+    "16019": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [
+        "临战时",
+        "临战小时"
+      ],
+      "name_chs": "时（武装）",
+      "name_cht": "季（武裝）",
+      "name_en": "Toki (Armed)"
+    },
+    "10134": {
+      "TacticRole": "DamageDealer",
+      "Range": 650,
+      "abbr": [
+        "机甲爱丽丝",
+        "临战爱丽丝",
+        "机甲爱"
+      ],
+      "name_chs": "爱丽丝（武装）",
+      "name_cht": "愛麗絲（武裝）",
+      "name_en": "Aris (Armed)"
+    },
+    "10135": {
+      "TacticRole": "Supporter",
+      "Range": 850,
+      "abbr": [
+        "kei"
+      ],
+      "name_chs": "柯伊",
+      "name_cht": "Kei",
+      "name_en": "Kei"
+    },
+    "10136": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [
+        "临战艾米"
+      ],
+      "name_chs": "艾米（武装）",
+      "name_cht": "英美（武裝）",
+      "name_en": "Eimi (Armed)"
+    },
+    "10137": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [],
+      "name_chs": "木乃香",
+      "name_cht": "木乃香",
+      "name_en": "Konoka"
+    },
+    "10138": {
+      "TacticRole": "Supporter",
+      "Range": 550,
+      "abbr": [],
+      "name_chs": "丽奈",
+      "name_cht": "玲奈",
+      "name_en": "Rena"
+    }
+  },
+  "specials": {
+    "20000": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "响爷"
+      ],
+      "name_chs": "响",
+      "name_cht": "響",
+      "name_en": "Hibiki"
+    },
+    "20001": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "黑皮"
+      ],
+      "name_chs": "花凛",
+      "name_cht": "花凛",
+      "name_en": "Karin"
+    },
+    "20002": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "鼠",
+        "鼠鼠"
+      ],
+      "name_chs": "纱绫",
+      "name_cht": "沙耶",
+      "name_en": "Saya"
+    },
+    "23000": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "冰淇淋"
+      ],
+      "name_chs": "爱理",
+      "name_cht": "愛莉",
+      "name_en": "Airi"
+    },
+    "23001": {
+      "TacticRole": "Healer",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "风香",
+      "name_cht": "風華",
+      "name_en": "Fuuka"
+    },
+    "23002": {
+      "TacticRole": "Healer",
+      "Range": 1000,
+      "abbr": [
+        "大护士"
+      ],
+      "name_chs": "花江",
+      "name_cht": "花繪",
+      "name_en": "Hanae"
+    },
+    "23003": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "小钩八"
+      ],
+      "name_chs": "晴",
+      "name_cht": "晴",
+      "name_en": "Hare"
+    },
+    "23004": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "炮台",
+        "炮"
+      ],
+      "name_chs": "歌原",
+      "name_cht": "詠葉",
+      "name_en": "Utaha"
+    },
+    "23005": {
+      "TacticRole": "Healer",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "绫音",
+      "name_cht": "綾音",
+      "name_en": "Ayane"
+    },
+    "26000": {
+      "TacticRole": "Healer",
+      "Range": 1000,
+      "abbr": [
+        "红秋裤"
+      ],
+      "name_chs": "千夏",
+      "name_cht": "千夏",
+      "name_en": "Chinatsu"
+    },
+    "26001": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "小玉",
+      "name_cht": "小玉",
+      "name_en": "Kotama"
+    },
+    "26002": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "朱莉",
+      "name_cht": "茱莉",
+      "name_en": "Juri"
+    },
+    "26003": {
+      "TacticRole": "Healer",
+      "Range": 1000,
+      "abbr": [
+        "小护士"
+      ],
+      "name_chs": "芹娜",
+      "name_cht": "芹奈",
+      "name_en": "Serina"
+    },
+    "26004": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "志美子",
+      "name_cht": "志美子",
+      "name_en": "Shimiko"
+    },
+    "26005": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "好美",
+      "name_cht": "喜美",
+      "name_en": "Yoshimi"
+    },
+    "20003": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "真白",
+      "name_cht": "麻白",
+      "name_en": "Mashiro"
+    },
+    "23006": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "静子",
+      "name_cht": "靜子",
+      "name_en": "Shizuko"
+    },
+    "26006": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "和香",
+      "name_cht": "和香",
+      "name_en": "Nodoka"
+    },
+    "23007": {
+      "TacticRole": "Healer",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "花子",
+      "name_cht": "花子",
+      "name_en": "Hanako"
+    },
+    "20004": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "水真白"
+      ],
+      "name_chs": "真白（泳装）",
+      "name_cht": "麻白(泳裝)",
+      "name_en": "Mashiro (Swimsuit)"
+    },
+    "20005": {
+      "TacticRole": "Vehicle",
+      "Range": 1000,
+      "abbr": [
+        "水日富美"
+      ],
+      "name_chs": "日富美（泳装）",
+      "name_cht": "日步美(泳裝)",
+      "name_en": "Hifumi (Swimsuit)"
+    },
+    "20006": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "私服鼠",
+        "私服鼠鼠",
+        "滑鼠"
+      ],
+      "name_chs": "纱绫（便服）",
+      "name_cht": "沙耶(私服)",
+      "name_en": "Saya (Casual)"
+    },
+    "23008": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "玛丽",
+      "name_cht": "瑪麗",
+      "name_en": "Mari"
+    },
+    "20007": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "初音"
+      ],
+      "name_chs": "初音未来",
+      "name_cht": "初音未來",
+      "name_en": "Hatsune Miku"
+    },
+    "20008": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "亚",
+        "爱犬"
+      ],
+      "name_chs": "亚子",
+      "name_cht": "亞子",
+      "name_en": "Ako"
+    },
+    "20009": {
+      "TacticRole": "Vehicle",
+      "Range": 1000,
+      "abbr": [
+        "温泉萝",
+        "温泉斯大萝"
+      ],
+      "name_chs": "切里诺（温泉）",
+      "name_cht": "潔莉諾(溫泉)",
+      "name_en": "Cherino (Hot Spring)"
+    },
+    "20010": {
+      "TacticRole": "Healer",
+      "Range": 1000,
+      "abbr": [
+        "温泉和香"
+      ],
+      "name_chs": "和香（温泉）",
+      "name_cht": "和香(溫泉)",
+      "name_en": "Nodoka (Hot Spring)"
+    },
+    "20011": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "春黑",
+        "春黑猫",
+        "春芹香"
+      ],
+      "name_chs": "芹香（新年）",
+      "name_cht": "茜香(正月)",
+      "name_en": "Serika (New Year)"
+    },
+    "20012": {
+      "TacticRole": "Vehicle",
+      "Range": 1000,
+      "abbr": [
+        "救护车"
+      ],
+      "name_chs": "濑名",
+      "name_cht": "瀬奈",
+      "name_en": "Sena"
+    },
+    "20013": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "千寻",
+      "name_cht": "千尋",
+      "name_en": "Chihiro"
+    },
+    "20014": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "saki",
+        "咲希"
+      ],
+      "name_chs": "咲",
+      "name_cht": "咲希",
+      "name_en": "Saki"
+    },
+    "20015": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "枫",
+      "name_cht": "楓",
+      "name_en": "Kaede"
+    },
+    "20016": {
+      "TacticRole": "Vehicle",
+      "Range": 1000,
+      "abbr": [
+        "168",
+        "虎丸",
+        "虎式"
+      ],
+      "name_chs": "伊吕波",
+      "name_cht": "伊呂波",
+      "name_en": "Iroha"
+    },
+    "20017": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "日和",
+      "name_cht": "日和",
+      "name_en": "Hiyori"
+    },
+    "26007": {
+      "TacticRole": "Vehicle",
+      "Range": 1000,
+      "abbr": [
+        "飞机",
+        "水飞机",
+        "牢大"
+      ],
+      "name_chs": "绫音（泳装）",
+      "name_cht": "綾音(泳裝)",
+      "name_en": "Ayane (Swimsuit)"
+    },
+    "26008": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "水静子"
+      ],
+      "name_chs": "静子（泳装）",
+      "name_cht": "靜子(泳裝)",
+      "name_en": "Shizuko (Swimsuit)"
+    },
+    "20018": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "moe"
+      ],
+      "name_chs": "萌绘",
+      "name_cht": "萌",
+      "name_en": "Moe"
+    },
+    "20019": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "白兔"
+      ],
+      "name_chs": "茜（邦妮）",
+      "name_cht": "朱音(兔女郎)",
+      "name_en": "Akane (Bunny)"
+    },
+    "20020": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "轮",
+        "轮椅"
+      ],
+      "name_chs": "日鞠",
+      "name_cht": "陽葵",
+      "name_en": "Himari"
+    },
+    "20021": {
+      "TacticRole": "Healer",
+      "Range": 1000,
+      "abbr": [
+        "圣大护",
+        "圣大护士",
+        "圣诞大护士"
+      ],
+      "name_chs": "花江（圣诞）",
+      "name_cht": "花繪(聖誕節)",
+      "name_en": "Hanae (Christmas)"
+    },
+    "20022": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "锅",
+        "春锅"
+      ],
+      "name_chs": "风香（新年）",
+      "name_cht": "風華(正月)",
+      "name_en": "Fuuka (New Year)"
+    },
+    "20023": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "局长"
+      ],
+      "name_chs": "康娜",
+      "name_cht": "環奈",
+      "name_en": "Kanna"
+    },
+    "20024": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "猪"
+      ],
+      "name_chs": "渚",
+      "name_cht": "渚",
+      "name_en": "Nagisa"
+    },
+    "20025": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "春遥香",
+        "春春香"
+      ],
+      "name_chs": "春香（新年）",
+      "name_cht": "遙香(正月)",
+      "name_en": "Haruka (New Year)"
+    },
+    "26009": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "箱柚",
+        "女仆柚"
+      ],
+      "name_chs": "柚子（女仆）",
+      "name_cht": "柚子(女僕)",
+      "name_en": "Yuzu (Maid)"
+    },
+    "20026": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "工头"
+      ],
+      "name_chs": "实梨",
+      "name_cht": "實里",
+      "name_en": "Minori"
+    },
+    "26010": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "水美游"
+      ],
+      "name_chs": "美游（泳装）",
+      "name_cht": "美優(泳裝)",
+      "name_en": "Miyu (Swimsuit)"
+    },
+    "20027": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "白",
+        "泊",
+        "水白",
+        "水白子",
+        "水狼"
+      ],
+      "name_chs": "白子（泳装）",
+      "name_cht": "白子(泳裝)",
+      "name_en": "Shiroko (Swimsuit)"
+    },
+    "20028": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "水日向"
+      ],
+      "name_chs": "日向（泳装）",
+      "name_cht": "日向(泳裝)",
+      "name_en": "Hinata (Swimsuit)"
+    },
+    "20029": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "水三森"
+      ],
+      "name_chs": "三森（泳装）",
+      "name_cht": "三森(泳裝)",
+      "name_en": "Mimori (Swimsuit)"
+    },
+    "20030": {
+      "TacticRole": "Healer",
+      "Range": 1000,
+      "abbr": [
+        "体晴奈"
+      ],
+      "name_chs": "晴奈（体操服）",
+      "name_cht": "羽留奈(體育服)",
+      "name_en": "Haruna (Track)"
+    },
+    "20031": {
+      "TacticRole": "Healer",
+      "Range": 1000,
+      "abbr": [
+        "温泉时雨",
+        "温泉貂",
+        "被窝"
+      ],
+      "name_chs": "时雨（温泉）",
+      "name_cht": "時雨(溫泉)",
+      "name_en": "Shigure (Hot Spring)"
+    },
+    "26011": {
+      "TacticRole": "DamageDealer",
+      "Range": 1500,
+      "abbr": [
+        "泪子",
+        "泪",
+        "泪爷"
+      ],
+      "name_chs": "佐天泪子",
+      "name_cht": "佐天涙子",
+      "name_en": "Saten Ruiko"
+    },
+    "20032": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "水艾米"
+      ],
+      "name_chs": "艾米（泳装）",
+      "name_cht": "英美(泳裝)",
+      "name_en": "Eimi (Swimsuit)"
+    },
+    "20033": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "猴王"
+      ],
+      "name_chs": "真琴",
+      "name_cht": "真琴",
+      "name_en": "Makoto"
+    },
+    "20034": {
+      "TacticRole": "Vehicle",
+      "Range": 1000,
+      "abbr": [
+        "春明里"
+      ],
+      "name_chs": "明里（新年）",
+      "name_cht": "亞伽里(正月)",
+      "name_en": "Akari (New Year)"
+    },
+    "20035": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "导狗",
+        "导游椿"
+      ],
+      "name_chs": "椿（导游）",
+      "name_cht": "椿(導覽員)",
+      "name_en": "Tsubaki (Guide)"
+    },
+    "20036": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "水猫",
+        "水黑猫",
+        "水芹香"
+      ],
+      "name_chs": "芹香（泳装）",
+      "name_cht": "茜香(泳裝)",
+      "name_en": "Serika (Swimsuit)"
+    },
+    "20037": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "水吹雪"
+      ],
+      "name_chs": "吹雪（泳装）",
+      "name_cht": "吹雪(泳裝)",
+      "name_en": "Fubuki (Swimsuit)"
+    },
+    "26012": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "水桐乃"
+      ],
+      "name_chs": "桐乃（泳装）",
+      "name_cht": "桐乃(泳裝)",
+      "name_en": "Kirino (Swimsuit)"
+    },
+    "26013": {
+      "TacticRole": "Healer",
+      "Range": 1000,
+      "abbr": [
+        "水公主",
+        "水敦",
+        "水敦子",
+        "水亚津子"
+      ],
+      "name_chs": "亚津子（泳装）",
+      "name_cht": "敦子(泳裝)",
+      "name_en": "Atsuko (Swimsuit)"
+    },
+    "20038": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "旗袍巴"
+      ],
+      "name_chs": "巴（旗袍）",
+      "name_cht": "智惠(旗袍)",
+      "name_en": "Tomoe (Qipao)"
+    },
+    "20039": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "妃"
+      ],
+      "name_chs": "妃咲",
+      "name_cht": "妃姬",
+      "name_en": "Kisaki"
+    },
+    "20040": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "皋",
+        "大皋"
+      ],
+      "name_chs": "皋月",
+      "name_cht": "皐月",
+      "name_en": "Satsuki"
+    },
+    "26014": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "jk花凛",
+        "制服花凛"
+      ],
+      "name_chs": "花凛（制服）",
+      "name_cht": "花凛(制服)",
+      "name_en": "Karin (School)"
+    },
+    "20041": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "莉"
+      ],
+      "name_chs": "莉音",
+      "name_cht": "莉央",
+      "name_en": "Rio"
+    },
+    "20042": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "露营真纪"
+      ],
+      "name_chs": "真纪（露营）",
+      "name_cht": "真紀(露營)",
+      "name_en": "Maki (Camp)"
+    },
+    "20043": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "春老八"
+      ],
+      "name_chs": "泉（正月）",
+      "name_cht": "泉(正月)",
+      "name_en": "Izumi (New Year)"
+    },
+    "20044": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "工堇",
+        "打工堇"
+      ],
+      "name_chs": "堇（打工）",
+      "name_cht": "堇(打工)",
+      "name_en": "Sumire (Part-Timer)"
+    },
+    "20045": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "导菲",
+        "导游菲娜"
+      ],
+      "name_chs": "菲娜（导游）",
+      "name_cht": "菲娜(導覽員)",
+      "name_en": "Pina (Guide)"
+    },
+    "20046": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "尼娅",
+      "name_cht": "仁耶",
+      "name_en": "Niya"
+    },
+    "20047": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "水桔梗"
+      ],
+      "name_chs": "桔梗（泳装）",
+      "name_cht": "桔梗(泳裝)",
+      "name_en": "Kikyou (Swimsuit)"
+    },
+    "26015": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "水一花"
+      ],
+      "name_chs": "一花（泳装）",
+      "name_cht": "一花(泳裝)",
+      "name_en": "Ichika (Swimsuit)"
+    },
+    "20048": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "水渚"
+      ],
+      "name_chs": "渚（泳装）",
+      "name_cht": "渚(泳裝)",
+      "name_en": "Nagisa (Swimsuit)"
+    },
+    "20049": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "水美咲"
+      ],
+      "name_chs": "美咲（泳装）",
+      "name_cht": "美咲(泳裝)",
+      "name_en": "Misaki (Swimsuit)"
+    },
+    "20050": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [],
+      "name_chs": "律",
+      "name_cht": "律",
+      "name_en": "Ritsu"
+    },
+    "20051": {
+      "TacticRole": "Healer",
+      "Range": 1000,
+      "abbr": [
+        "魔芋",
+        "魔法芋泥"
+      ],
+      "name_chs": "玲纱（魔法）",
+      "name_cht": "澪紗(魔法少女)",
+      "name_en": "Reisa (Magical)"
+    },
+    "20052": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "八",
+        "巴"
+      ],
+      "name_chs": "八云",
+      "name_cht": "八雲",
+      "name_en": "Yakumo"
+    },
+    "20053": {
+      "TacticRole": "Healer",
+      "Range": 1000,
+      "abbr": [
+        "礼满",
+        "满",
+        "曼"
+      ],
+      "name_chs": "满（礼服）",
+      "name_cht": "三千留（禮服）",
+      "name_en": "Michiru (Dress)"
+    },
+    "20054": {
+      "TacticRole": "Vehicle",
+      "Range": 1000,
+      "abbr": [
+        "临战日鞠",
+        "摩托"
+      ],
+      "name_chs": "日鞠（武装）",
+      "name_cht": "陽葵（武裝）",
+      "name_en": "Himari (Armed)"
+    },
+    "20055": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "临战柚子"
+      ],
+      "name_chs": "柚子（武装）",
+      "name_cht": "柚子（武裝）",
+      "name_en": "Yuzu (Armed)"
+    },
+    "20056": {
+      "TacticRole": "Supporter",
+      "Range": 1000,
+      "abbr": [
+        "睡衣小雪"
+      ],
+      "name_chs": "小雪（睡衣）",
+      "name_cht": "小雪（睡衣）",
+      "name_en": "Koyuki (Pajamas)"
+    },
+    "20057": {
+      "TacticRole": "DamageDealer",
+      "Range": 1000,
+      "abbr": [
+        "jk茜",
+        "制服茜"
+      ],
+      "name_chs": "茜（制服）",
+      "name_cht": "朱音（制服）",
+      "name_en": "Akane (School)"
+    }
+  }
+}
