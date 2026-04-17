@@ -653,6 +653,29 @@ class BAPvpRecorderPlugin(Star):
             raise ValueError("第一步识别结果为空")
         return result
 
+    def _calc_unknown_ratio(self, battles: list[dict[str, Any]]) -> tuple[int, int, float]:
+        total = 0
+        unknown = 0
+        name_fields = ["name", "st1_name", "st2_name", "st3_name", "st4_name", "sp1_name", "sp2_name"]
+
+        for battle in battles:
+            if not isinstance(battle, dict):
+                continue
+            for side_key in ["attack", "defend"]:
+                side = battle.get(side_key, {})
+                if not isinstance(side, dict):
+                    continue
+                for field in name_fields:
+                    total += 1
+                    val = str(side.get(field, "") or "").strip()
+                    if self._normalize_name(val) == "unknown":
+                        unknown += 1
+
+        if total <= 0:
+            return 0, 0, 0.0
+        ratio = unknown / total
+        return unknown, total, ratio
+
     def _name_to_id_lookup(self, name: str) -> str:
         norm = self._normalize_name(name)
         if not norm or norm == "unknown":
@@ -894,6 +917,13 @@ class BAPvpRecorderPlugin(Star):
 
             name_battles.extend(parsed_batch)
             logger.info(f"[名称识别] 批次 {i}/{len(batches)} 完成，records={len(parsed_batch)}")
+
+        unknown_count, total_count, unknown_ratio = self._calc_unknown_ratio(name_battles)
+        if total_count > 0 and unknown_ratio > (1 / 3):
+            logger.warning(
+                f"识别结果拒绝入库：UNKNOWN占比过高 unknown={unknown_count}/{total_count} ratio={unknown_ratio:.2%}"
+            )
+            return False, f"识别结果无效：UNKNOWN占比过高({unknown_count}/{total_count})"
 
         mapped_battles, unresolved = self._apply_local_name_mapping(name_battles)
         if unresolved:
