@@ -1,6 +1,6 @@
 name: astrbot_plugin_ba_pvp_recorder
 display_name: 蔚蓝档案竞技场记录插件
-desc: 记录并查询蔚蓝档案竞技场对战信息的 AstrBot 插件。
+desc: 自动调用 LLM 识别并记录指定群聊中的竞技场战报截图，同时提供对应的查询命令。
 version: v0.2.3
 author: yiktllw
 repo: https://github.com/yiktllw/astrbot_plugin_ba_pvp_recorder
