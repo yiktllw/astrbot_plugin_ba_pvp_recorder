@@ -7,6 +7,9 @@ from typing import Any
 
 import aiohttp
 
+SCRIPT_DIR = Path(__file__).resolve().parent
+
+
 
 def load_students(json_path: Path) -> list[str]:
     data = json.loads(json_path.read_text(encoding='utf-8'))
@@ -134,10 +137,17 @@ def main() -> int:
     )
     args = parser.parse_args()
 
+    json_path = Path(args.input)
+    if args.input == "students.simplified.json" and not json_path.is_absolute():
+        json_path = SCRIPT_DIR / json_path
+
+    out_dir = Path(args.out_dir)
+    if args.out_dir == "avatars" and not out_dir.is_absolute():
+        out_dir = SCRIPT_DIR / out_dir
     stats = asyncio.run(
         download_avatars_from_file(
-            json_path=Path(args.input),
-            out_dir=Path(args.out_dir),
+            json_path=json_path,
+            out_dir=out_dir,
             timeout=args.timeout,
             concurrency=args.concurrency,
             verbose=True,

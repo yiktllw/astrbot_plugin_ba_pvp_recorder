@@ -172,24 +172,26 @@ def build_team_index(
     return out
 
 
-def main() -> int:
-    source_path = Path(SOURCE_JSON)
-    output_path = Path(OUTPUT_JSON)
-    team_output_path = Path(TEAM_OUTPUT_JSON)
+def main(base_dir: Path | None = None) -> int:
+    work_dir = Path(base_dir).resolve() if base_dir is not None else Path(__file__).resolve().parent
+
+    source_path = work_dir / SOURCE_JSON
+    output_path = work_dir / OUTPUT_JSON
+    team_output_path = work_dir / TEAM_OUTPUT_JSON
 
     records = load_records(source_path, DICT_KEY_FIELD)
     simplified = simplify_records(records, KEEP_KEYS, STRICT_MODE)
 
     zh_tw_map: dict[str, str] = {}
     if ENABLE_ZH_TW_NAME:
-        zh_tw_map = build_name_map(Path(ZH_TW_SOURCE_JSON))
+        zh_tw_map = build_name_map(work_dir / ZH_TW_SOURCE_JSON)
         for item in simplified:
             sid = str(item.get("id", ""))
             item[ZH_TW_OUTPUT_KEY] = zh_tw_map.get(sid, "")
 
     en_map: dict[str, str] = {}
     if ENABLE_EN_NAME:
-        en_map = build_name_map(Path(EN_SOURCE_JSON))
+        en_map = build_name_map(work_dir / EN_SOURCE_JSON)
         for item in simplified:
             sid = str(item.get("id", ""))
             item[EN_OUTPUT_KEY] = en_map.get(sid, "")
@@ -201,7 +203,7 @@ def main() -> int:
         else:
             json.dump(simplified, f, ensure_ascii=False, separators=(",", ":"))
 
-    abbr_map = load_abbr_map(Path(ABBR_JSON))
+    abbr_map = load_abbr_map(work_dir / ABBR_JSON)
     team_index = build_team_index(records, zh_tw_map, en_map, abbr_map)
     with team_output_path.open("w", encoding="utf-8") as f:
         json.dump(team_index, f, ensure_ascii=False, indent=2)

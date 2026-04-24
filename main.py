@@ -22,7 +22,6 @@ try:
 except Exception:
     extract_quoted_message_images = None
 
-
 @register("astrbot_plugin_ba_pvp_recorder", "yiktllw", "蔚蓝档案竞技场记录插件", "0.4.0")
 class BAPvpRecorderPlugin(Star):
     _RENDER_LAYOUT = {
@@ -83,7 +82,7 @@ class BAPvpRecorderPlugin(Star):
 
         plugin_dir = Path(__file__).resolve().parent
         self._plugin_dir = plugin_dir
-        self._data_dir = Path(StarTools.get_data_dir("astrbot_plugin_ba_pvp_recorder"))
+        self._data_dir = StarTools.get_data_dir("astrbot_plugin_ba_pvp_recorder")
 
         self._img_prompt_file = plugin_dir / "prompt_of_img2txt.txt"
         self._name2id_prompt_file = plugin_dir / "prompt_of_name2id.txt"
@@ -112,6 +111,7 @@ class BAPvpRecorderPlugin(Star):
         self._daily_update_task: asyncio.Task | None = None
         self._update_data_module: Any = None
         self._verbose_auto_monitor_logs = False
+        self._timezone_offset_hours = 8
 
     async def initialize(self):
         self._data_dir.mkdir(parents=True, exist_ok=True)
@@ -206,6 +206,19 @@ class BAPvpRecorderPlugin(Star):
         text = str(value).strip().lower()
         return text in {"1", "true", "yes", "y", "on", "enabled"}
 
+    @staticmethod
+    def _parse_timezone_offset_hours(value: Any, default: int = 8) -> tuple[int, bool]:
+        try:
+            offset = int(str(value).strip())
+        except Exception:
+            return default, False
+        if offset < -12 or offset > 14:
+            return default, False
+        return offset, True
+
+    def _query_timezone(self) -> timezone:
+        return timezone(timedelta(hours=self._timezone_offset_hours))
+
     def _refresh_monitored_group_ids(self):
         raw = self.config.get("monitor_group_ids", "") if isinstance(self.config, dict) else ""
         ids: set[str] = set()
@@ -220,9 +233,19 @@ class BAPvpRecorderPlugin(Star):
                 if v:
                     ids.add(v)
         self._monitored_group_ids = ids
+
         verbose_raw = self.config.get("verbose_auto_monitor_logs", False) if isinstance(self.config, dict) else False
         self._verbose_auto_monitor_logs = self._parse_bool_config(verbose_raw)
-        logger.info(f"监控群聊ID加载完成: {sorted(self._monitored_group_ids)}")
+
+        tz_raw = self.config.get("timezone_offset_hours", 8) if isinstance(self.config, dict) else 8
+        tz_offset, tz_valid = self._parse_timezone_offset_hours(tz_raw, default=8)
+        self._timezone_offset_hours = tz_offset
+        if not tz_valid:
+            logger.warning(f"timezone_offset_hours invalid, fallback to 8 (input={tz_raw})")
+
+        logger.info(
+            f"监控群聊ID加载完成: {sorted(self._monitored_group_ids)}; verbose_auto_monitor_logs={self._verbose_auto_monitor_logs}; timezone_offset_hours={self._timezone_offset_hours}"
+        )
 
     @filter.on_llm_request()
     async def _on_llm_request(self, event: AstrMessageEvent, req: ProviderRequest):
@@ -289,28 +312,28 @@ class BAPvpRecorderPlugin(Star):
         if not isinstance(data, list):
             raise ValueError("students.simplified.json 结构必须是数组")
 
-        self._students_list = data
-        self._student_dict = {}
-        self._name_to_id = {}
+        students_list_local: list[dict[str, Any]] = data
+        student_dict_local: dict[str, str] = {}
+        name_to_id_local: dict[str, str] = {}
+
         for item in data:
             if not isinstance(item, dict):
                 continue
             sid = str(item.get("id", "")).strip()
             if not sid:
                 continue
-            self._student_dict[sid] = str(item.get("name") or sid)
+            student_dict_local[sid] = str(item.get("name") or sid)
             for alias in [item.get("name", ""), item.get("t_name", ""), item.get("en_name", "")]:
                 norm = self._normalize_name(alias)
                 if norm:
-                    self._name_to_id[norm] = sid
+                    name_to_id_local[norm] = sid
 
+        self._students_list = students_list_local
+        self._student_dict = student_dict_local
+        self._name_to_id = name_to_id_local
         return json.dumps(data, ensure_ascii=False, separators=(",", ":"))
 
     def _load_team_index_context(self):
-        self._team_strikers = {}
-        self._team_specials = {}
-        self._abbr_equiv_ids = {}
-
         if not self._team_index_file.exists():
             logger.warning(f"队伍索引文件不存在: {self._team_index_file.as_posix()}")
             return
@@ -325,17 +348,24 @@ class BAPvpRecorderPlugin(Star):
             logger.warning("队伍索引文件结构错误：顶层必须是对象")
             return
 
+        team_strikers_local: dict[str, dict[str, Any]] = {}
+        team_specials_local: dict[str, dict[str, Any]] = {}
+
         strikers = data.get("strikers", {})
         specials = data.get("specials", {})
         if isinstance(strikers, dict):
-            self._team_strikers = {str(k): v for k, v in strikers.items() if isinstance(v, dict)}
+            team_strikers_local = {str(k): v for k, v in strikers.items() if isinstance(v, dict)}
         if isinstance(specials, dict):
-            self._team_specials = {str(k): v for k, v in specials.items() if isinstance(v, dict)}
+            team_specials_local = {str(k): v for k, v in specials.items() if isinstance(v, dict)}
 
-        self._abbr_equiv_ids = self._load_abbr_equiv_ids()
-        for sid in list(self._team_strikers.keys()) + list(self._team_specials.keys()):
-            if sid not in self._abbr_equiv_ids:
-                self._abbr_equiv_ids[sid] = {sid}
+        abbr_equiv_ids_local = self._load_abbr_equiv_ids()
+        for sid in list(team_strikers_local.keys()) + list(team_specials_local.keys()):
+            if sid not in abbr_equiv_ids_local:
+                abbr_equiv_ids_local[sid] = {sid}
+
+        self._team_strikers = team_strikers_local
+        self._team_specials = team_specials_local
+        self._abbr_equiv_ids = abbr_equiv_ids_local
 
         logger.info(
             f"队伍索引加载完成: strikers={len(self._team_strikers)}, specials={len(self._team_specials)}"
@@ -513,7 +543,6 @@ class BAPvpRecorderPlugin(Star):
                 Path("/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc"),
                 Path("/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc"),
                 Path("/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc"),
-                Path("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"),
             ]
         else:
             candidates = [
@@ -522,8 +551,8 @@ class BAPvpRecorderPlugin(Star):
                 Path("/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"),
                 Path("/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc"),
                 Path("/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc"),
-                Path("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"),
             ]
+
         for font_path in candidates:
             if not font_path.exists():
                 continue
@@ -538,7 +567,11 @@ class BAPvpRecorderPlugin(Star):
                     return ImageFont.truetype(font_path.as_posix(), size=size)
                 except Exception:
                     continue
-        return ImageFont.load_default()
+
+        checked = ", ".join(p.as_posix() for p in candidates)
+        msg = f"未找到可用中文字体（bold={bold}），请检查 fonts 目录或系统字体。已检查: {checked}"
+        logger.error(msg)
+        raise RuntimeError(msg)
 
     def _normalize_image_source_key(self, raw: str) -> str:
         val = str(raw or "").strip()
@@ -1405,8 +1438,8 @@ class BAPvpRecorderPlugin(Star):
 
     @filter.command("今日战报")
     async def today_records_command(self, event: AstrMessageEvent, username: str = ""):
-        tz_8 = timezone(timedelta(hours=8))
-        now_local = datetime.now(tz_8)
+        tz_local = self._query_timezone()
+        now_local = datetime.now(tz_local)
         today_str = self._battle_date_str(now_local)
         async for r in self._do_query_and_render(event, username, today_str):
             yield r
@@ -1430,7 +1463,6 @@ class BAPvpRecorderPlugin(Star):
             limit = 50
         async for r in self._do_query_and_render(event, user, "", limit):
             yield r
-
 
     @filter.command("队伍")
     async def team_query_command(
@@ -1565,7 +1597,7 @@ class BAPvpRecorderPlugin(Star):
             yield event.plain_result("当前群组/会话暂无战报记录。")
             return
 
-        tz_8 = timezone(timedelta(hours=8))
+        tz_local = self._query_timezone()
         with sqlite3.connect(record_db) as conn:
             conn.row_factory = sqlite3.Row
             cur = conn.cursor()
@@ -1575,7 +1607,7 @@ class BAPvpRecorderPlugin(Star):
         records_to_render: list[dict[str, Any]] = []
         for row in rows:
             utc_dt = datetime.fromisoformat(row["created_at"])
-            local_dt = utc_dt.astimezone(tz_8)
+            local_dt = utc_dt.astimezone(tz_local)
 
             try:
                 parsed = json.loads(row["result_json"])
@@ -1625,7 +1657,7 @@ class BAPvpRecorderPlugin(Star):
             yield event.plain_result("当前群组/会话暂无战报记录。")
             return
 
-        tz_8 = timezone(timedelta(hours=8))
+        tz_local = self._query_timezone()
         with sqlite3.connect(record_db) as conn:
             conn.row_factory = sqlite3.Row
             cur = conn.cursor()
@@ -1636,7 +1668,7 @@ class BAPvpRecorderPlugin(Star):
         records_to_render: list[dict[str, Any]] = []
         for row in rows:
             utc_dt = datetime.fromisoformat(row["created_at"])
-            local_dt = utc_dt.astimezone(tz_8)
+            local_dt = utc_dt.astimezone(tz_local)
             battle_date = self._battle_date_str(local_dt)
             if date_str and battle_date != date_str:
                 continue

@@ -10,5 +10,11 @@
     "type": "string",
     "hint": "true/false，默认 false。开启后会输出自动监控命中与判图结果日志。",
     "default": "false"
+  },
+  "timezone_offset_hours": {
+    "description": "查询与今日战报使用的时区偏移（小时）",
+    "type": "string",
+    "hint": "可选范围 -12 到 14，默认 8（国服）。国际服则为 9。",
+    "default": "8"
   }
 }

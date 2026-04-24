@@ -82,7 +82,7 @@ async def run_update_async(
 
         if verbose:
             print('[4/5] 运行 build_simplified_json.py（生成 students.simplified.json + students.team_index.json）')
-        build_ret = await asyncio.to_thread(build_simplified_json.main)
+        build_ret = await asyncio.to_thread(build_simplified_json.main, base_dir)
         if int(build_ret) != 0:
             raise RuntimeError(f'build_simplified_json.py 返回异常状态: {build_ret}')
 
