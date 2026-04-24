@@ -16,5 +16,11 @@
     "type": "string",
     "hint": "可选范围 -12 到 14，默认 8（国服）。国际服则为 9。",
     "default": "8"
+  },
+  "font_paths": {
+    "description": "可选自定义字体文件路径",
+    "type": "string",
+    "hint": "可填 ttc/ttf/otf 文件绝对路径，多个路径用逗号或换行分隔",
+    "default": ""
   }
 }

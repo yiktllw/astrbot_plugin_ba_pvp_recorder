@@ -10,7 +10,6 @@ import aiohttp
 SCRIPT_DIR = Path(__file__).resolve().parent
 
 
-
 def load_students(json_path: Path) -> list[str]:
     data = json.loads(json_path.read_text(encoding='utf-8'))
     if not isinstance(data, list):
@@ -31,7 +30,6 @@ def load_students(json_path: Path) -> list[str]:
 
 async def _download_avatar(
     session: aiohttp.ClientSession,
-    sem: asyncio.Semaphore,
     student_id: str,
     out_dir: Path,
 ) -> tuple[str, str]:
@@ -40,18 +38,17 @@ async def _download_avatar(
         return 'skipped', student_id
 
     url = f'https://schaledb.com/images/student/collection/{student_id}.webp'
-    async with sem:
-        try:
-            async with session.get(url) as resp:
-                if resp.status != 200:
-                    return 'failed', f'{student_id}.webp HTTP {resp.status}'
-                data = await resp.read()
-                if not data:
-                    return 'failed', f'{student_id}.webp 空响应'
-                out_file.write_bytes(data)
-                return 'downloaded', student_id
-        except Exception as e:
-            return 'failed', f'{student_id}.webp {e}'
+    try:
+        async with session.get(url) as resp:
+            if resp.status != 200:
+                return 'failed', f'{student_id}.webp HTTP {resp.status}'
+            data = await resp.read()
+            if not data:
+                return 'failed', f'{student_id}.webp 空响应'
+            out_file.write_bytes(data)
+            return 'downloaded', student_id
+    except Exception as e:
+        return 'failed', f'{student_id}.webp {e}'
 
 
 async def download_avatars_from_file(
@@ -75,12 +72,12 @@ async def download_avatars_from_file(
     }
 
     timeout_cfg = aiohttp.ClientTimeout(total=timeout)
-    sem = asyncio.Semaphore(max(1, concurrency))
     headers = {'User-Agent': 'Mozilla/5.0'}
+    connector = aiohttp.TCPConnector(limit=max(1, concurrency))
 
-    async with aiohttp.ClientSession(timeout=timeout_cfg, headers=headers) as session:
+    async with aiohttp.ClientSession(timeout=timeout_cfg, headers=headers, connector=connector) as session:
         tasks = [
-            _download_avatar(session=session, sem=sem, student_id=sid, out_dir=out_dir)
+            _download_avatar(session=session, student_id=sid, out_dir=out_dir)
             for sid in students
         ]
 
@@ -98,6 +95,9 @@ async def download_avatars_from_file(
                 stats['failed'] += 1
                 if verbose:
                     print(f'[FAILED] {detail}')
+
+    # 给事件循环一个短暂机会清理底层连接，降低短生命周期脚本下的 connector 警告概率。
+    await asyncio.sleep(0.25)
 
     if verbose:
         print('----')
@@ -138,12 +138,13 @@ def main() -> int:
     args = parser.parse_args()
 
     json_path = Path(args.input)
-    if args.input == "students.simplified.json" and not json_path.is_absolute():
+    if args.input == 'students.simplified.json' and not json_path.is_absolute():
         json_path = SCRIPT_DIR / json_path
 
     out_dir = Path(args.out_dir)
-    if args.out_dir == "avatars" and not out_dir.is_absolute():
+    if args.out_dir == 'avatars' and not out_dir.is_absolute():
         out_dir = SCRIPT_DIR / out_dir
+
     stats = asyncio.run(
         download_avatars_from_file(
             json_path=json_path,

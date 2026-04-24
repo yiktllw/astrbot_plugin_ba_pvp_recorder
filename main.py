@@ -112,6 +112,7 @@ class BAPvpRecorderPlugin(Star):
         self._update_data_module: Any = None
         self._verbose_auto_monitor_logs = False
         self._timezone_offset_hours = 8
+        self._font_paths: list[Path] = []
 
     async def initialize(self):
         self._data_dir.mkdir(parents=True, exist_ok=True)
@@ -154,7 +155,8 @@ class BAPvpRecorderPlugin(Star):
         return (next_run - now).total_seconds(), next_run
 
     async def _run_daily_update_once(self):
-        self._load_update_data_module()
+        if self._update_data_module is None:
+            self._load_update_data_module()
         if self._update_data_module is None:
             return
 
@@ -177,7 +179,6 @@ class BAPvpRecorderPlugin(Star):
             logger.info("[定时更新] 数据更新完成并重新加载映射成功")
         except Exception as e:
             logger.warning(f"[定时更新] 数据更新后重载映射失败: {e}")
-
     async def _daily_update_loop(self):
         try:
             while True:
@@ -216,6 +217,28 @@ class BAPvpRecorderPlugin(Star):
             return default, False
         return offset, True
 
+    @staticmethod
+    def _parse_path_list_config(value: Any) -> list[Path]:
+        items: list[str] = []
+        if isinstance(value, list):
+            for it in value:
+                s = str(it or "").strip()
+                if s:
+                    items.append(s)
+        elif isinstance(value, str):
+            for it in re.split(r"[,，\n\r\t]+", value):
+                s = str(it or "").strip()
+                if s:
+                    items.append(s)
+
+        result: list[Path] = []
+        for item in items:
+            try:
+                result.append(Path(item).expanduser())
+            except Exception:
+                continue
+        return result
+
     def _query_timezone(self) -> timezone:
         return timezone(timedelta(hours=self._timezone_offset_hours))
 
@@ -243,10 +266,12 @@ class BAPvpRecorderPlugin(Star):
         if not tz_valid:
             logger.warning(f"timezone_offset_hours invalid, fallback to 8 (input={tz_raw})")
 
-        logger.info(
-            f"监控群聊ID加载完成: {sorted(self._monitored_group_ids)}; verbose_auto_monitor_logs={self._verbose_auto_monitor_logs}; timezone_offset_hours={self._timezone_offset_hours}"
-        )
+        font_paths_raw = self.config.get("font_paths", "") if isinstance(self.config, dict) else ""
+        self._font_paths = self._parse_path_list_config(font_paths_raw)
 
+        logger.info(
+            f"监控群聊ID加载完成: {sorted(self._monitored_group_ids)}; verbose_auto_monitor_logs={self._verbose_auto_monitor_logs}; timezone_offset_hours={self._timezone_offset_hours}; font_paths={len(self._font_paths)}"
+        )
     @filter.on_llm_request()
     async def _on_llm_request(self, event: AstrMessageEvent, req: ProviderRequest):
         if event.unified_msg_origin not in self._minimal_effort_sessions:
@@ -537,22 +562,22 @@ class BAPvpRecorderPlugin(Star):
     def _load_font(self, size: int, bold: bool = False) -> ImageFont.FreeTypeFont | ImageFont.ImageFont:
         local_dir = self._plugin_dir / "fonts"
         if bold:
-            candidates = [
+            local_candidates = [
                 local_dir / "NotoSansCJK-Bold.ttc",
                 local_dir / "NotoSerifCJK-Bold.ttc",
-                Path("/usr/share/fonts/opentype/noto/NotoSansCJK-Bold.ttc"),
-                Path("/usr/share/fonts/opentype/noto/NotoSerifCJK-Bold.ttc"),
-                Path("/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc"),
             ]
         else:
-            candidates = [
+            local_candidates = [
                 local_dir / "NotoSansCJK-Regular.ttc",
                 local_dir / "NotoSerifCJK-Regular.ttc",
-                Path("/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"),
-                Path("/usr/share/fonts/opentype/noto/NotoSerifCJK-Regular.ttc"),
-                Path("/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc"),
             ]
 
+        ext_candidates: list[Path] = []
+        for p in self._font_paths:
+            if p.suffix.lower() in {".ttc", ".ttf", ".otf"}:
+                ext_candidates.append(p)
+
+        candidates = local_candidates + ext_candidates
         for font_path in candidates:
             if not font_path.exists():
                 continue
@@ -569,10 +594,9 @@ class BAPvpRecorderPlugin(Star):
                     continue
 
         checked = ", ".join(p.as_posix() for p in candidates)
-        msg = f"未找到可用中文字体（bold={bold}），请检查 fonts 目录或系统字体。已检查: {checked}"
+        msg = f"未找到可用中文字体（bold={bold}），请检查插件 fonts 目录或配置 font_paths。已检查: {checked}"
         logger.error(msg)
         raise RuntimeError(msg)
-
     def _normalize_image_source_key(self, raw: str) -> str:
         val = str(raw or "").strip()
         if not val:
@@ -731,19 +755,26 @@ class BAPvpRecorderPlugin(Star):
         if cleaned.startswith("```"):
             cleaned = re.sub(r"^```[a-zA-Z0-9_]*\n", "", cleaned)
             cleaned = re.sub(r"\n```$", "", cleaned)
+
         try:
             return json.loads(cleaned)
-        except Exception:
+        except Exception as e_first:
             decoder = json.JSONDecoder()
-            starts = [i for i in (cleaned.find("{"), cleaned.find("[")) if i != -1]
-            for st in sorted(starts):
+            scan_text = cleaned[:20000]
+            starts: list[int] = []
+            for idx, ch in enumerate(scan_text):
+                if ch == "{" or ch == "[":
+                    starts.append(idx)
+                    if len(starts) >= 64:
+                        break
+
+            for st in starts:
                 try:
-                    obj, _ = decoder.raw_decode(cleaned[st:])
+                    obj, _ = decoder.raw_decode(scan_text[st:])
                     return obj
                 except Exception:
                     continue
-            raise
-
+            raise e_first
     def _parse_judge_result(self, text: str) -> tuple[bool, list[str]]:
         obj = self._safe_json_parse(text)
         if not isinstance(obj, dict):

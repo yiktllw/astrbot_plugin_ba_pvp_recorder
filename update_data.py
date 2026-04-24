@@ -9,6 +9,9 @@ import aiohttp
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 
+_BUILD_SIMPLIFIED_MODULE: ModuleType | None = None
+_DOWNLOAD_AVATARS_MODULE: ModuleType | None = None
+
 
 def _load_local_module(module_name: str, file_name: str) -> ModuleType:
     module_path = SCRIPT_DIR / file_name
@@ -22,6 +25,23 @@ def _load_local_module(module_name: str, file_name: str) -> ModuleType:
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
     return module
+
+
+def _get_local_modules() -> tuple[ModuleType, ModuleType]:
+    global _BUILD_SIMPLIFIED_MODULE, _DOWNLOAD_AVATARS_MODULE
+
+    if _BUILD_SIMPLIFIED_MODULE is None:
+        _BUILD_SIMPLIFIED_MODULE = _load_local_module(
+            'astrbot_plugin_ba_pvp_build_simplified_json',
+            'build_simplified_json.py',
+        )
+    if _DOWNLOAD_AVATARS_MODULE is None:
+        _DOWNLOAD_AVATARS_MODULE = _load_local_module(
+            'astrbot_plugin_ba_pvp_download_avatars',
+            'download_avatars.py',
+        )
+
+    return _BUILD_SIMPLIFIED_MODULE, _DOWNLOAD_AVATARS_MODULE
 
 
 async def _download_one(
@@ -88,14 +108,7 @@ async def run_update_async(
     base_dir = script_dir or SCRIPT_DIR
 
     try:
-        build_simplified_json = _load_local_module(
-            'astrbot_plugin_ba_pvp_build_simplified_json',
-            'build_simplified_json.py',
-        )
-        download_avatars = _load_local_module(
-            'astrbot_plugin_ba_pvp_download_avatars',
-            'download_avatars.py',
-        )
+        build_simplified_json, download_avatars = _get_local_modules()
 
         await _download_sources(base_dir, timeout=timeout, verbose=verbose)
 
