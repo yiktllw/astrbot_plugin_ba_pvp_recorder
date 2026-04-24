@@ -1,17 +1,27 @@
 #!/usr/bin/env python3
 import argparse
 import asyncio
-import sys
+import importlib.util
 from pathlib import Path
+from types import ModuleType
 
 import aiohttp
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-if str(SCRIPT_DIR) not in sys.path:
-    sys.path.insert(0, str(SCRIPT_DIR))
 
-import build_simplified_json
-import download_avatars
+
+def _load_local_module(module_name: str, file_name: str) -> ModuleType:
+    module_path = SCRIPT_DIR / file_name
+    if not module_path.exists():
+        raise FileNotFoundError(f"未找到模块文件: {module_path}")
+
+    spec = importlib.util.spec_from_file_location(module_name, module_path)
+    if spec is None or spec.loader is None:
+        raise RuntimeError(f"无法创建模块规格: {module_path}")
+
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
 
 
 async def _download_one(
@@ -78,6 +88,15 @@ async def run_update_async(
     base_dir = script_dir or SCRIPT_DIR
 
     try:
+        build_simplified_json = _load_local_module(
+            'astrbot_plugin_ba_pvp_build_simplified_json',
+            'build_simplified_json.py',
+        )
+        download_avatars = _load_local_module(
+            'astrbot_plugin_ba_pvp_download_avatars',
+            'download_avatars.py',
+        )
+
         await _download_sources(base_dir, timeout=timeout, verbose=verbose)
 
         if verbose:

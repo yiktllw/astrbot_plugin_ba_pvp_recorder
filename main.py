@@ -485,7 +485,7 @@ class BAPvpRecorderPlugin(Star):
         if not cleaned:
             return [], 0, "用法：/队伍 [参数]；支持 1 个(4-6字)、4-6 个、或 7 个参数(第7个为数量上限)"
 
-        limit = 20
+        limit = 10
         tokens: list[str] = []
 
         if len(cleaned) == 1:
@@ -1645,7 +1645,7 @@ class BAPvpRecorderPlugin(Star):
 
         try:
             q = "".join(tokens)
-            out_file = self._render_records_image(records_to_render, f"队伍:{q}", "")
+            out_file = await asyncio.to_thread(self._render_records_image, records_to_render, f"队伍:{q}", "")
             yield event.image_result(out_file.as_posix())
         except Exception as e:
             logger.error(f"渲染队伍查询图片失败: {e}")
@@ -1706,7 +1706,7 @@ class BAPvpRecorderPlugin(Star):
             return
 
         try:
-            out_file = self._render_records_image(records_to_render, username, date_str)
+            out_file = await asyncio.to_thread(self._render_records_image, records_to_render, username, date_str)
             yield event.image_result(out_file.as_posix())
         except Exception as e:
             logger.error(f"渲染战报图片失败: {e}")
