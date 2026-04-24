@@ -4,5 +4,11 @@
     "type": "string",
     "hint": "多个群号可用逗号或空格分隔，例如：123456, 234567",
     "default": ""
+  },
+  "verbose_auto_monitor_logs": {
+    "description": "是否开启自动监控详细日志",
+    "type": "string",
+    "hint": "true/false，默认 false。开启后会输出自动监控命中与判图结果日志。",
+    "default": "false"
   }
 }

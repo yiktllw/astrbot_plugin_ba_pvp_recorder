@@ -1,4 +1,5 @@
 import asyncio
+import importlib.util
 import json
 import re
 import sqlite3
@@ -10,6 +11,7 @@ from typing import Any
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
 from astrbot.api import AstrBotConfig, logger
+import astrbot.api.message_components as Comp
 from astrbot.api.event import AstrMessageEvent, filter
 from astrbot.api.provider import ProviderRequest
 from astrbot.api.star import Context, Star, register
@@ -23,6 +25,58 @@ except Exception:
 
 @register("astrbot_plugin_ba_pvp_recorder", "yiktllw", "蔚蓝档案竞技场记录插件", "0.4.0")
 class BAPvpRecorderPlugin(Star):
+    _RENDER_LAYOUT = {
+        "width": 1080,
+        "margin": 16,
+        "header_h": 70,
+        "card_h": 162,
+        "card_gap": 10,
+        "header_radius": 12,
+        "card_radius": 12,
+        "header_title_x": 16,
+        "header_title_y": 10,
+        "header_meta_x": 16,
+        "header_meta_y": 44,
+        "half_gap": 10,
+        "card_time_x": 12,
+        "card_time_y": 4,
+        "card_inner_left_x": 8,
+        "card_inner_top_y": 24,
+        "slot_w": 76,
+        "slot_h": 76,
+        "slot_gap": 6,
+        "slot_radius": 10,
+        "avatar_size": 48,
+        "avatar_top_pad": 6,
+        "name_max_len": 8,
+        "name_trim_len": 7,
+        "name_y": 58,
+        "status_header_h": 34,
+        "status_radius": 10,
+        "status_text_min_pad": 12,
+    }
+
+    _RENDER_THEME = {
+        "canvas_bg": (239, 244, 250),
+        "header_bg": (19, 33, 49),
+        "header_title_text": (255, 255, 255),
+        "header_meta_text": (177, 197, 220),
+        "card_bg": (248, 251, 255),
+        "card_border": (210, 219, 230),
+        "card_time_text": (78, 92, 108),
+        "slot_bg": (245, 247, 251),
+        "slot_border": (214, 222, 231),
+        "placeholder_bg": (209, 215, 223),
+        "placeholder_text": (96, 106, 118),
+        "slot_name_text": (48, 57, 68),
+        "status_header_text": (255, 255, 255),
+        "attack_win_light": (44, 153, 255),
+        "attack_win_dark": (18, 87, 168),
+        "status_lose_light": (139, 154, 173),
+        "status_lose_dark": (91, 103, 120),
+        "defend_win_light": (240, 98, 98),
+        "defend_win_dark": (167, 56, 56),
+    }
     def __init__(self, context: Context, config: AstrBotConfig | None = None):
         super().__init__(context)
         self.config = config if isinstance(config, dict) else {}
@@ -54,6 +108,10 @@ class BAPvpRecorderPlugin(Star):
         self._minimal_effort_sessions: set[str] = set()
         self._llm_timeout_seconds = 90
         self._llm_max_retries = 2
+        self._daily_update_hour = 18
+        self._daily_update_task: asyncio.Task | None = None
+        self._update_data_module: Any = None
+        self._verbose_auto_monitor_logs = False
 
     async def initialize(self):
         self._data_dir.mkdir(parents=True, exist_ok=True)
@@ -63,7 +121,90 @@ class BAPvpRecorderPlugin(Star):
         self._students_context = self._load_students_context()
         self._load_team_index_context()
         self._refresh_monitored_group_ids()
+        self._start_daily_update_task()
         logger.info("BAPvpRecorderPlugin initialized")
+
+    def _load_update_data_module(self):
+        module_path = self._plugin_dir / "update_data.py"
+        if not module_path.exists():
+            logger.warning(f"update_data.py 不存在: {module_path.as_posix()}")
+            self._update_data_module = None
+            return
+
+        try:
+            spec = importlib.util.spec_from_file_location(
+                "astrbot_plugin_ba_pvp_update_data", module_path
+            )
+            if spec is None or spec.loader is None:
+                raise RuntimeError("无法创建 update_data.py 的模块规格")
+            module = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(module)
+            if not hasattr(module, "run_update_async"):
+                raise RuntimeError("update_data.py 缺少 run_update_async")
+            self._update_data_module = module
+        except Exception as e:
+            self._update_data_module = None
+            logger.warning(f"加载 update_data.py 失败: {e}")
+
+    def _seconds_until_next_daily_update(self) -> tuple[float, datetime]:
+        now = datetime.now().astimezone()
+        next_run = now.replace(hour=self._daily_update_hour, minute=0, second=0, microsecond=0)
+        if next_run <= now:
+            next_run += timedelta(days=1)
+        return (next_run - now).total_seconds(), next_run
+
+    async def _run_daily_update_once(self):
+        self._load_update_data_module()
+        if self._update_data_module is None:
+            return
+
+        try:
+            ret = await self._update_data_module.run_update_async(
+                script_dir=self._plugin_dir,
+                verbose=False,
+            )
+        except Exception as e:
+            logger.warning(f"[定时更新] 执行 update_data.py 失败: {e}")
+            return
+
+        if int(ret) != 0:
+            logger.warning(f"[定时更新] update_data.py 返回非0状态: {ret}")
+            return
+
+        try:
+            self._students_context = self._load_students_context()
+            self._load_team_index_context()
+            logger.info("[定时更新] 数据更新完成并重新加载映射成功")
+        except Exception as e:
+            logger.warning(f"[定时更新] 数据更新后重载映射失败: {e}")
+
+    async def _daily_update_loop(self):
+        try:
+            while True:
+                wait_seconds, next_run = self._seconds_until_next_daily_update()
+                logger.info(
+                    f"[定时更新] 下一次执行时间: {next_run.strftime('%Y-%m-%d %H:%M:%S %z')}"
+                )
+                await asyncio.sleep(wait_seconds)
+                logger.info("[定时更新] 开始执行每日 update_data.py")
+                await self._run_daily_update_once()
+        except asyncio.CancelledError:
+            logger.info("[定时更新] 每日更新任务已停止")
+            raise
+
+    def _start_daily_update_task(self):
+        if self._daily_update_task and not self._daily_update_task.done():
+            return
+        self._daily_update_task = asyncio.create_task(self._daily_update_loop())
+
+    @staticmethod
+    def _parse_bool_config(value: Any) -> bool:
+        if isinstance(value, bool):
+            return value
+        if value is None:
+            return False
+        text = str(value).strip().lower()
+        return text in {"1", "true", "yes", "y", "on", "enabled"}
 
     def _refresh_monitored_group_ids(self):
         raw = self.config.get("monitor_group_ids", "") if isinstance(self.config, dict) else ""
@@ -79,6 +220,8 @@ class BAPvpRecorderPlugin(Star):
                 if v:
                     ids.add(v)
         self._monitored_group_ids = ids
+        verbose_raw = self.config.get("verbose_auto_monitor_logs", False) if isinstance(self.config, dict) else False
+        self._verbose_auto_monitor_logs = self._parse_bool_config(verbose_raw)
         logger.info(f"监控群聊ID加载完成: {sorted(self._monitored_group_ids)}")
 
     @filter.on_llm_request()
@@ -798,7 +941,6 @@ class BAPvpRecorderPlugin(Star):
         msg_id = str(getattr(getattr(event, "message_obj", None), "message_id", "") or "").strip()
         if msg_id:
             try:
-                import astrbot.api.message_components as Comp
                 reply_comp = None
                 for kwargs in ({"id": msg_id}, {"message_id": msg_id}, {"msg_id": msg_id}):
                     try:
@@ -947,13 +1089,13 @@ class BAPvpRecorderPlugin(Star):
             logger.error(f"写入记录失败: {e}")
             return False, "写入数据库失败"
 
-        if silent:
+        if silent and self._verbose_auto_monitor_logs:
             logger.info(
                 f"[静默记录] 已记录战报 group={self._get_group_id(event)} sender={event.get_sender_id()} images={len(image_data_urls)} batches={len(batches)}"
             )
         return True, "ok"
 
-    @filter.regex(r"^.*$")
+    @filter.regex(r".*(\[图片\]|\[CQ:image\]).*")
     async def auto_monitor_group_images(self, event: AstrMessageEvent):
         group_id = self._get_group_id(event)
         if not group_id:
@@ -962,13 +1104,15 @@ class BAPvpRecorderPlugin(Star):
             return
         user_text = str(event.message_str or "").strip()
         if user_text.startswith("/记录") or user_text.startswith("记录"):
-            logger.info(f"[自动监控] 跳过 /记录 指令消息 group={group_id}")
+            if self._verbose_auto_monitor_logs:
+                logger.info(f"[自动监控] 跳过 /记录 指令消息 group={group_id}")
             return
         image_data_urls = await self._extract_image_data_urls(event)
         if not image_data_urls:
             return
 
-        logger.info(f"[自动监控] 命中监控群图片消息 group={group_id} sender={event.get_sender_id()} images={len(image_data_urls)}")
+        if self._verbose_auto_monitor_logs:
+            logger.info(f"[自动监控] 命中监控群图片消息 group={group_id} sender={event.get_sender_id()} images={len(image_data_urls)}")
 
         judge_prompt = self._build_judge_prompt(image_urls=image_data_urls, user_text=user_text, message_outline=event.get_message_outline())
         image_timeout = self._image_timeout_seconds(image_data_urls)
@@ -991,9 +1135,10 @@ class BAPvpRecorderPlugin(Star):
             logger.warning(f"[自动监控] 判图结果解析失败 group={group_id}: {e}; raw={judge_text}")
             return
 
-        logger.info(
-            f"[自动监控] 判图结果 group={group_id}: is_ba_pvp_report={is_report}, names={len(judge_player_names)}"
-        )
+        if self._verbose_auto_monitor_logs:
+            logger.info(
+                f"[自动监控] 判图结果 group={group_id}: is_ba_pvp_report={is_report}, names={len(judge_player_names)}"
+            )
         if not is_report:
             return
 
@@ -1005,7 +1150,8 @@ class BAPvpRecorderPlugin(Star):
             player_name_context=judge_player_names,
         )
         if ok:
-            logger.info(f"[自动监控] 静默记录完成 group={group_id}")
+            if self._verbose_auto_monitor_logs:
+                logger.info(f"[自动监控] 静默记录完成 group={group_id}")
         else:
             logger.warning(f"[自动监控] 静默记录失败 group={group_id}: {reason}")
 
@@ -1086,10 +1232,18 @@ class BAPvpRecorderPlugin(Star):
         return {"name": side_data.get("name", "未知"), "status": bool(side_data.get("status", False)), "strikers": strikers, "specials": specials}
 
     def _draw_student_slot(self, canvas: Image.Image, draw: ImageDraw.ImageDraw, member: dict[str, str], x: int, y: int, slot_w: int, slot_h: int, name_font: ImageFont.FreeTypeFont | ImageFont.ImageFont):
-        draw.rounded_rectangle((x, y, x + slot_w, y + slot_h), radius=10, fill=(245, 247, 251), outline=(214, 222, 231), width=1)
-        avatar_size = 48
+        layout = self._RENDER_LAYOUT
+        theme = self._RENDER_THEME
+        draw.rounded_rectangle(
+            (x, y, x + slot_w, y + slot_h),
+            radius=layout["slot_radius"],
+            fill=theme["slot_bg"],
+            outline=theme["slot_border"],
+            width=1,
+        )
+        avatar_size = layout["avatar_size"]
         avatar_x = x + (slot_w - avatar_size) // 2
-        avatar_y = y + 6
+        avatar_y = y + layout["avatar_top_pad"]
         avatar = None
         avatar_path = member.get("avatar_path", "")
         if avatar_path:
@@ -1099,59 +1253,63 @@ class BAPvpRecorderPlugin(Star):
             except Exception as e:
                 logger.warning(f"头像加载失败: {avatar_path}, {e}")
         if avatar is None:
-            avatar = Image.new("RGB", (avatar_size, avatar_size), (209, 215, 223))
+            avatar = Image.new("RGB", (avatar_size, avatar_size), theme["placeholder_bg"])
             qd = ImageDraw.Draw(avatar)
-            qd.text((18, 14), "?", fill=(96, 106, 118), font=self._load_font(22, True))
+            qd.text((18, 14), "?", fill=theme["placeholder_text"], font=self._load_font(22, True))
         canvas.paste(avatar, (avatar_x, avatar_y))
 
         name = str(member.get("name", "未知"))
-        if len(name) > 8:
-            name = name[:7] + "…"
+        if len(name) > layout["name_max_len"]:
+            name = name[: layout["name_trim_len"]] + "…"
         tw = draw.textlength(name, font=name_font)
-        draw.text((x + (slot_w - tw) / 2, y + 58), name, font=name_font, fill=(48, 57, 68))
-
+        draw.text((x + (slot_w - tw) / 2, y + layout["name_y"]), name, font=name_font, fill=theme["slot_name_text"])
     def _status_colors(self, is_attack: bool, status: bool) -> tuple[tuple[int, int, int], tuple[int, int, int]]:
+        theme = self._RENDER_THEME
         if is_attack:
             if status:
-                return (44, 153, 255), (18, 87, 168)
-            return (139, 154, 173), (91, 103, 120)
+                return theme["attack_win_light"], theme["attack_win_dark"]
+            return theme["status_lose_light"], theme["status_lose_dark"]
         if status:
-            return (240, 98, 98), (167, 56, 56)
-        return (139, 154, 173), (91, 103, 120)
-
+            return theme["defend_win_light"], theme["defend_win_dark"]
+        return theme["status_lose_light"], theme["status_lose_dark"]
     def _draw_side_header(self, draw: ImageDraw.ImageDraw, x: int, y: int, w: int, h: int, side_name: str, status: bool, is_attack: bool, font: ImageFont.FreeTypeFont | ImageFont.ImageFont):
+        layout = self._RENDER_LAYOUT
+        theme = self._RENDER_THEME
         _, c2 = self._status_colors(is_attack, status)
-        draw.rounded_rectangle((x, y, x + w, y + h), radius=10, fill=c2)
+        draw.rounded_rectangle((x, y, x + w, y + h), radius=layout["status_radius"], fill=c2)
         draw.rectangle((x, y + h // 2, x + w, y + h), fill=c2)
         status_text = "Win" if status else "Lose"
         text = f"{side_name}  {status_text}"
         tw = draw.textlength(text, font=font)
-        tx = x + max(12, (w - tw) / 2)
-        draw.text((tx, y), text, font=font, fill=(255, 255, 255))
-
+        tx = x + max(layout["status_text_min_pad"], (w - tw) / 2)
+        draw.text((tx, y), text, font=font, fill=theme["status_header_text"])
     def _draw_side_students(self, canvas: Image.Image, draw: ImageDraw.ImageDraw, side: dict[str, Any], x: int, y: int, w: int):
+        layout = self._RENDER_LAYOUT
         members = list(side.get("strikers", [])) + list(side.get("specials", []))
         while len(members) < 6:
             members.append({"name": "空", "avatar_path": ""})
         members = members[:6]
-        slot_w = 76
-        slot_h = 76
-        gap = 6
+        slot_w = layout["slot_w"]
+        slot_h = layout["slot_h"]
+        gap = layout["slot_gap"]
         total_w = slot_w * 6 + gap * 5
         start_x = x + max(0, (w - total_w) // 2)
         name_font = self._load_font(13)
         for i in range(6):
             px = start_x + i * (slot_w + gap)
             self._draw_student_slot(canvas, draw, members[i], px, y, slot_w, slot_h, name_font)
-
     def _render_records_image(self, records: list[dict[str, Any]], query_user: str, query_date: str) -> Path:
-        width = 1080
-        margin = 16
-        header_h = 70
-        card_h = 162
-        card_gap = 10
+        layout = self._RENDER_LAYOUT
+        theme = self._RENDER_THEME
+
+        width = layout["width"]
+        margin = layout["margin"]
+        header_h = layout["header_h"]
+        card_h = layout["card_h"]
+        card_gap = layout["card_gap"]
         height = margin * 2 + header_h + len(records) * (card_h + card_gap)
-        image = Image.new("RGB", (width, height), (239, 244, 250))
+
+        image = Image.new("RGB", (width, height), theme["canvas_bg"])
         draw = ImageDraw.Draw(image)
 
         title_font = self._load_font(28, True)
@@ -1159,25 +1317,70 @@ class BAPvpRecorderPlugin(Star):
         side_font = self._load_font(22, True)
         time_font = self._load_font(14)
 
-        draw.rounded_rectangle((margin, margin, width - margin, margin + header_h), radius=12, fill=(19, 33, 49))
-        draw.text((margin + 16, margin + 10), "BA PVP 战报", font=title_font, fill=(255, 255, 255))
+        draw.rounded_rectangle(
+            (margin, margin, width - margin, margin + header_h),
+            radius=layout["header_radius"],
+            fill=theme["header_bg"],
+        )
+        draw.text(
+            (margin + layout["header_title_x"], margin + layout["header_title_y"]),
+            "BA PVP 战报",
+            font=title_font,
+            fill=theme["header_title_text"],
+        )
         meta_text = f"用户: {query_user or '全部'}   日期: {query_date or '全部'}   条数: {len(records)}"
-        draw.text((margin + 16, margin + 44), meta_text, font=meta_font, fill=(177, 197, 220))
+        draw.text(
+            (margin + layout["header_meta_x"], margin + layout["header_meta_y"]),
+            meta_text,
+            font=meta_font,
+            fill=theme["header_meta_text"],
+        )
 
         y = margin + header_h + 8
-        half_gap = 10
+        half_gap = layout["half_gap"]
         half_w = (width - margin * 2 - half_gap) // 2
         for rec in records:
-            draw.rounded_rectangle((margin, y, width - margin, y + card_h), radius=12, fill=(248, 251, 255), outline=(210, 219, 230), width=1)
-            draw.text((margin + 12, y + 4), f"时间: {rec.get('time', '未知')}", font=time_font, fill=(78, 92, 108))
-            left_x = margin + 8
+            draw.rounded_rectangle(
+                (margin, y, width - margin, y + card_h),
+                radius=layout["card_radius"],
+                fill=theme["card_bg"],
+                outline=theme["card_border"],
+                width=1,
+            )
+            draw.text(
+                (margin + layout["card_time_x"], y + layout["card_time_y"]),
+                f"时间: {rec.get('time', '未知')}",
+                font=time_font,
+                fill=theme["card_time_text"],
+            )
+            left_x = margin + layout["card_inner_left_x"]
             right_x = left_x + half_w + half_gap
-            top_y = y + 24
+            top_y = y + layout["card_inner_top_y"]
 
             attack = rec.get("attack", {})
             defend = rec.get("defend", {})
-            self._draw_side_header(draw, left_x, top_y, half_w, 34, str(attack.get("name") or "未知"), bool(attack.get("status")), True, side_font)
-            self._draw_side_header(draw, right_x, top_y, half_w, 34, str(defend.get("name") or "未知"), bool(defend.get("status")), False, side_font)
+            self._draw_side_header(
+                draw,
+                left_x,
+                top_y,
+                half_w,
+                layout["status_header_h"],
+                str(attack.get("name") or "未知"),
+                bool(attack.get("status")),
+                True,
+                side_font,
+            )
+            self._draw_side_header(
+                draw,
+                right_x,
+                top_y,
+                half_w,
+                layout["status_header_h"],
+                str(defend.get("name") or "未知"),
+                bool(defend.get("status")),
+                False,
+                side_font,
+            )
             self._draw_side_students(image, draw, attack, left_x, top_y + 42, half_w)
             self._draw_side_students(image, draw, defend, right_x, top_y + 42, half_w)
             y += card_h + card_gap
@@ -1187,7 +1390,6 @@ class BAPvpRecorderPlugin(Star):
         out_file = out_dir / f"report_{datetime.now().strftime('%Y%m%d_%H%M%S_%f')}.png"
         image.save(out_file.as_posix(), format="PNG")
         return out_file
-
     def _battle_date_str(self, dt_local: datetime) -> str:
         if dt_local.hour < 3:
             dt_local = dt_local - timedelta(days=1)
@@ -1479,4 +1681,10 @@ class BAPvpRecorderPlugin(Star):
             yield event.plain_result(f"渲染图片失败: {e}")
 
     async def terminate(self):
+        if self._daily_update_task and not self._daily_update_task.done():
+            self._daily_update_task.cancel()
+            try:
+                await self._daily_update_task
+            except asyncio.CancelledError:
+                pass
         logger.info("BAPvpRecorderPlugin terminated")
