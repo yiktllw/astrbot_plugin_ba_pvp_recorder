@@ -1207,7 +1207,7 @@
   },
   {
     "id": 10107,
-    "name": "千秋",
+    "name": "千明",
     "t_name": "千秋",
     "en_name": "Chiaki"
   },
@@ -1540,5 +1540,23 @@
     "name": "茜（制服）",
     "t_name": "朱音（制服）",
     "en_name": "Akane (School)"
+  },
+  {
+    "id": 10139,
+    "name": "妮可",
+    "t_name": "仁子",
+    "en_name": "Niko"
+  },
+  {
+    "id": 10140,
+    "name": "胡桃",
+    "t_name": "胡桃",
+    "en_name": "Kurumi"
+  },
+  {
+    "id": 16020,
+    "name": "御伽",
+    "t_name": "御伽",
+    "en_name": "Otogi"
   }
 ]

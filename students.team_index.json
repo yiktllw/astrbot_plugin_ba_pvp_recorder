@@ -1481,7 +1481,7 @@
       "TacticRole": "DamageDealer",
       "Range": 650,
       "abbr": [],
-      "name_chs": "千秋",
+      "name_chs": "千明",
       "name_cht": "千秋",
       "name_en": "Chiaki"
     },
@@ -1831,6 +1831,30 @@
       "name_chs": "丽奈",
       "name_cht": "玲奈",
       "name_en": "Rena"
+    },
+    "10139": {
+      "TacticRole": "Supporter",
+      "Range": 450,
+      "abbr": [],
+      "name_chs": "妮可",
+      "name_cht": "仁子",
+      "name_en": "Niko"
+    },
+    "10140": {
+      "TacticRole": "Tanker",
+      "Range": 350,
+      "abbr": [],
+      "name_chs": "胡桃",
+      "name_cht": "胡桃",
+      "name_en": "Kurumi"
+    },
+    "16020": {
+      "TacticRole": "DamageDealer",
+      "Range": 750,
+      "abbr": [],
+      "name_chs": "御伽",
+      "name_cht": "御伽",
+      "name_en": "Otogi"
     }
   },
   "specials": {
