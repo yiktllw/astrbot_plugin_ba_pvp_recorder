@@ -1159,7 +1159,7 @@ class BAPvpRecorderPlugin(Star):
             )
         return True, "ok"
 
-    @filter.regex(r".*(\[图片\]|\[CQ:image\]).*")
+    @filter.regex(r"^.*$")
     async def auto_monitor_group_images(self, event: AstrMessageEvent):
         group_id = self._get_group_id(event)
         if not group_id:
