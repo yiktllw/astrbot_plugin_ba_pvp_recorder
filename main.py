@@ -621,6 +621,35 @@ class BAPvpRecorderPlugin(Star):
         except Exception:
             return f"path_raw:{val}"
 
+    async def _is_quoted_message(self, event: AstrMessageEvent) -> bool:
+        # 适配不同平台的引用组件命名：Reply/Quote/Reference 等。
+        try:
+            for comp in event.get_messages():
+                cls_name = comp.__class__.__name__.lower()
+                if cls_name in {"reply", "quote", "reference", "replymessage", "quotemessage"}:
+                    return True
+                if "reply" in cls_name or "quote" in cls_name or "refer" in cls_name:
+                    return True
+        except Exception:
+            pass
+
+        if extract_quoted_message_images is not None:
+            try:
+                quoted = await extract_quoted_message_images(event)
+                if quoted:
+                    return True
+            except Exception:
+                pass
+
+        try:
+            outline = str(event.get_message_outline() or "").lower()
+            if "引用" in outline or "reply" in outline or "quote" in outline:
+                return True
+        except Exception:
+            pass
+
+        return False
+
     async def _extract_image_data_urls(self, event: AstrMessageEvent) -> list[str]:
         direct_urls: list[str] = []
         quoted_urls: list[str] = []
@@ -1171,6 +1200,12 @@ class BAPvpRecorderPlugin(Star):
             if self._verbose_auto_monitor_logs:
                 logger.info(f"[自动监控] 跳过 /记录 指令消息 group={group_id}")
             return
+
+        if await self._is_quoted_message(event):
+            if self._verbose_auto_monitor_logs:
+                logger.info(f"[自动监控] 跳过引用消息 group={group_id}")
+            return
+
         image_data_urls = await self._extract_image_data_urls(event)
         if not image_data_urls:
             return
